@@ -408,10 +408,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Article.cs" />
-    <Compile Include="Models\ArticleDetail.cs" />
-    <Compile Include="Models\Articles.cs" />
-    <Compile Include="Models\ArticlesResult.cs" />
     <Compile Include="Models\ErrorPage.cs" />
     <Compile Include="Models\exception.cs" />
     <Compile Include="Models\Result.cs" />

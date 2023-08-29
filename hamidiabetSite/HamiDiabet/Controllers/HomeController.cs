@@ -114,6 +114,5 @@ namespace HamiDiabet.Controllers
             return RedirectToAction("Index", "Home");
         }
         
-       
     }
 }
