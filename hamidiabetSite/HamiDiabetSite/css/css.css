@@ -1,0 +1,77 @@
+﻿
+@charset "utf-8";
+
+@font-face {
+    font-family: 'roya';
+    src: url('../../font/broya.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../../font/broya.ttf') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+body {
+    background: url('../images/bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'roya' !important;
+    direction: rtl !important;
+}
+
+.logo {
+    max-width: 100px;
+    display: block;
+    margin: 0px auto;
+}
+
+.hr {
+    background-color: rgba(242, 192, 138, 0.11) !important;
+    color: rgba(242, 192, 138, 0.31) !important;
+    height: 2px !important;
+    padding: 0px !important;
+    margin: 0px;
+}
+
+.icon a {
+    display: block;
+    margin: 0px auto;
+    text-decoration: none;
+}
+
+    .icon a:hover {
+        cursor: pointer;
+        color: #036fa5 !important;
+    }
+
+.icon span {
+    text-align: center;
+    color: #000;
+    font-size: 1em;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+    .icon span:hover {
+        cursor: pointer;
+        color: #036fa5 !important;
+    }
+
+.icon img {
+    max-width: 90px !important;
+    transition: 0.25s;
+}
+
+    .icon img:hover {
+        cursor: pointer;
+        max-width: 100px !important;
+    }
+
+.center {
+    margin: auto auto !important;
+}
+
+.pagination > li{
+    float:right;
+}
+.pagination {
+    padding:0px;
+}

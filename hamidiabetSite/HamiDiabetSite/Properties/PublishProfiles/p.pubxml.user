@@ -1,0 +1,940 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>\\172.16.32.29\hamidiabet.ir</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>01/31/2017 16:14:54</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>01/31/2017 16:14:54</publishTime>
+    </File>
+    <File Include="bin/HamiDiabet.dll">
+      <publishTime>12/11/2017 18:09:37</publishTime>
+    </File>
+    <File Include="bin/HamiDiabet.dll">
+      <publishTime>12/12/2017 17:20:33</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>01/31/2017 16:15:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>01/31/2017 16:15:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>01/31/2017 16:15:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>01/31/2017 16:15:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>01/31/2017 16:15:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>01/31/2017 16:15:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>01/31/2017 16:15:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>01/31/2017 16:15:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/31/2017 16:15:06</publishTime>
+    </File>
+    <File Include="bin/Persia.dll">
+      <publishTime>08/09/2015 10:09:21</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>01/31/2017 16:15:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>01/31/2017 16:15:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>01/31/2017 16:15:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>01/31/2017 16:15:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>01/31/2017 16:15:06</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>01/31/2017 16:15:06</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>01/31/2017 16:15:06</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>01/31/2017 16:15:06</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>01/31/2017 16:15:06</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>01/31/2017 16:15:06</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>01/31/2017 16:15:06</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>01/31/2017 16:15:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/31/2017 16:15:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/31/2017 16:15:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/31/2017 16:15:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>01/31/2017 16:15:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>01/31/2017 16:15:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>01/31/2017 16:15:04</publishTime>
+    </File>
+    <File Include="content/bootstrap.css">
+      <publishTime>02/02/2017 14:33:52</publishTime>
+    </File>
+    <File Include="content/bootstrap.min.css">
+      <publishTime>02/02/2017 14:33:52</publishTime>
+    </File>
+    <File Include="content/images/111.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/images/b-cloud.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/images/b-mobile.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/images/b-site.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/images/b-sms.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/images/b-ussd.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/images/busines_net.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/images/choosing-web-design.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/images/partner.png">
+      <publishTime>02/02/2017 15:04:18</publishTime>
+    </File>
+    <File Include="content/images/select_company.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/images/social-networks.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/images/افزایش-فروش-و-بازدید-سایت-در-شبکه-اجتماعی.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/images/سئو-و-طراحی-سایت-شرکت-وبتینا.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/images/طراحی-وبسایت-شرکتی-مشهد.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/images/کسب-کار-موفق-اینترنتی.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/pic/cms-web-design-webtina.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/pic/copyright-webtina.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/pic/sellfile.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/pic/Social-Media-marketing.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="content/Site.css">
+      <publishTime>02/02/2017 14:33:49</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="css/common.css">
+      <publishTime>12/04/2017 16:03:13</publishTime>
+    </File>
+    <File Include="css/core.css">
+      <publishTime>12/12/2017 12:30:57</publishTime>
+    </File>
+    <File Include="css/css.css">
+      <publishTime>12/04/2017 16:29:45</publishTime>
+    </File>
+    <File Include="css/font-awesome.min.css">
+      <publishTime>11/08/2017 10:34:02</publishTime>
+    </File>
+    <File Include="css/swiper.css">
+      <publishTime>11/06/2017 09:48:14</publishTime>
+    </File>
+    <File Include="css/swiper.min.css">
+      <publishTime>11/06/2017 09:48:14</publishTime>
+    </File>
+    <File Include="css/w3.css">
+      <publishTime>11/07/2017 12:32:08</publishTime>
+    </File>
+    <File Include="DataAccess.dbml">
+      <publishTime>12/12/2017 14:14:19</publishTime>
+    </File>
+    <File Include="fonts/font-awesome.css">
+      <publishTime>11/05/2017 10:04:01</publishTime>
+    </File>
+    <File Include="fonts/font-awesome.min.css">
+      <publishTime>11/05/2017 10:02:44</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/fontawesome-webfont.eot">
+      <publishTime>10/01/2017 23:49:40</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/fontawesome-webfont.svg">
+      <publishTime>10/01/2017 23:49:40</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/fontawesome-webfont.ttf">
+      <publishTime>10/01/2017 23:49:40</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/fontawesome-webfont.woff">
+      <publishTime>10/01/2017 23:49:40</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/fontawesome-webfont.woff2">
+      <publishTime>10/01/2017 23:49:40</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/FontAwesome.otf">
+      <publishTime>10/01/2017 23:49:40</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont93e3.eot">
+      <publishTime>02/02/2017 10:22:08</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont93e3.svg">
+      <publishTime>02/02/2017 10:22:08</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont93e3.ttf">
+      <publishTime>02/02/2017 10:22:08</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont93e3.woff">
+      <publishTime>02/02/2017 10:22:08</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont93e3.woff2">
+      <publishTime>02/02/2017 10:22:08</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfontd41d.eot">
+      <publishTime>02/02/2017 10:22:08</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>02/02/2017 14:33:52</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>02/02/2017 14:33:52</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>02/02/2017 14:33:52</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>02/02/2017 14:33:52</publishTime>
+    </File>
+    <File Include="fonts/web_Yekan.svg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="fonts/web_Yekan.ttf">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="fonts/web_Yekan.woff">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="fonts/web_Yekand41d.eot">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/12/2017 14:14:19</publishTime>
+    </File>
+    <File Include="images/1.jpg">
+      <publishTime>11/04/2017 17:00:08</publishTime>
+    </File>
+    <File Include="images/2.jpg">
+      <publishTime>11/04/2017 17:22:04</publishTime>
+    </File>
+    <File Include="images/3.jpg">
+      <publishTime>11/04/2017 17:00:06</publishTime>
+    </File>
+    <File Include="images/4.jpg">
+      <publishTime>11/04/2017 17:00:14</publishTime>
+    </File>
+    <File Include="images/5.jpg">
+      <publishTime>11/04/2017 17:00:20</publishTime>
+    </File>
+    <File Include="images/6.jpg">
+      <publishTime>11/04/2017 17:00:12</publishTime>
+    </File>
+    <File Include="images/bg.jpg">
+      <publishTime>12/04/2017 16:16:10</publishTime>
+    </File>
+    <File Include="images/bimarediabeti.jpg">
+      <publishTime>12/10/2017 12:21:26</publishTime>
+    </File>
+    <File Include="images/bronze.png">
+      <publishTime>11/14/2017 16:42:26</publishTime>
+    </File>
+    <File Include="images/bronz_kasb.png">
+      <publishTime>12/03/2017 11:32:45</publishTime>
+    </File>
+    <File Include="images/CEO_Site.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/child.jpg">
+      <publishTime>12/05/2017 11:19:51</publishTime>
+    </File>
+    <File Include="images/clinica.png">
+      <publishTime>12/04/2017 16:07:43</publishTime>
+    </File>
+    <File Include="images/content/bg.jpg">
+      <publishTime>10/31/2017 16:37:38</publishTime>
+    </File>
+    <File Include="images/content/clinica.png">
+      <publishTime>10/31/2017 16:37:38</publishTime>
+    </File>
+    <File Include="images/content/Diabetes.jpg">
+      <publishTime>11/01/2017 11:34:26</publishTime>
+    </File>
+    <File Include="images/content/doctors.png">
+      <publishTime>10/31/2017 16:37:38</publishTime>
+    </File>
+    <File Include="images/content/etelaResani.jpg">
+      <publishTime>11/04/2017 11:40:58</publishTime>
+    </File>
+    <File Include="images/content/hamianHame.jpg">
+      <publishTime>12/12/2017 17:18:39</publishTime>
+    </File>
+    <File Include="images/content/hamidiabet.jpg">
+      <publishTime>12/10/2017 16:53:14</publishTime>
+    </File>
+    <File Include="images/content/hamidiabet.png">
+      <publishTime>11/04/2017 11:37:46</publishTime>
+    </File>
+    <File Include="images/content/images/choosing-web-design.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/content/images/افزایش-فروش-و-بازدید-سایت-در-شبکه-اجتماعی.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/content/images/انتخاب-شرکت-طراحی-وبسایت-مناسب.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/content/images/انتخاب-شرکت-طراحی-وبسایت.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/content/images/بازاریابی-شبکه-های-اجتماعی-social-networks.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/content/images/سئو-و-طراحی-سایت-شرکت-وبتینا.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/content/images/طراحی-وبسایت-شرکتی-مشهد.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/content/images/کسب-وکار-اینترنتی-راه-اندازی-کنیم.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/content/images/کسب-کار-موفق-اینترنتی.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/content/logo.png">
+      <publishTime>10/31/2017 16:37:38</publishTime>
+    </File>
+    <File Include="images/content/logo2.png">
+      <publishTime>10/31/2017 16:37:38</publishTime>
+    </File>
+    <File Include="images/content/Patient-Support.jpg">
+      <publishTime>11/01/2017 11:34:26</publishTime>
+    </File>
+    <File Include="images/content/pic/cms-web-design-webtina.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/content/pic/copyright-webtina.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/content/pic/sellfile.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/content/pic/Social-Media-marketing.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/content/shutterstock_127222043.jpg">
+      <publishTime>11/01/2017 11:34:26</publishTime>
+    </File>
+    <File Include="images/content/stuff.png">
+      <publishTime>10/31/2017 16:37:38</publishTime>
+    </File>
+    <File Include="images/css/bootstrap.css">
+      <publishTime>02/02/2017 10:22:09</publishTime>
+    </File>
+    <File Include="images/css/core.css">
+      <publishTime>02/02/2017 10:22:09</publishTime>
+    </File>
+    <File Include="images/css/font-awesome.min.css">
+      <publishTime>02/02/2017 10:22:09</publishTime>
+    </File>
+    <File Include="images/doctor.png">
+      <publishTime>12/04/2017 09:57:25</publishTime>
+    </File>
+    <File Include="images/doctors.png">
+      <publishTime>12/04/2017 16:07:43</publishTime>
+    </File>
+    <File Include="images/favicon.ico">
+      <publishTime>11/04/2017 08:25:36</publishTime>
+    </File>
+    <File Include="images/fonts/fontawesome-webfont.eot">
+      <publishTime>11/05/2017 10:04:26</publishTime>
+    </File>
+    <File Include="images/fonts/fontawesome-webfont.svg">
+      <publishTime>11/05/2017 10:04:26</publishTime>
+    </File>
+    <File Include="images/fonts/fontawesome-webfont.ttf">
+      <publishTime>11/05/2017 10:04:26</publishTime>
+    </File>
+    <File Include="images/fonts/fontawesome-webfont.woff">
+      <publishTime>11/05/2017 10:04:26</publishTime>
+    </File>
+    <File Include="images/fonts/fontawesome-webfont.woff2">
+      <publishTime>11/05/2017 10:04:26</publishTime>
+    </File>
+    <File Include="images/fonts/fontawesome-webfont93e3.eot">
+      <publishTime>02/02/2017 10:22:09</publishTime>
+    </File>
+    <File Include="images/fonts/fontawesome-webfont93e3.svg">
+      <publishTime>02/02/2017 10:22:09</publishTime>
+    </File>
+    <File Include="images/fonts/fontawesome-webfont93e3.ttf">
+      <publishTime>02/02/2017 10:22:09</publishTime>
+    </File>
+    <File Include="images/fonts/fontawesome-webfont93e3.woff">
+      <publishTime>02/02/2017 10:22:09</publishTime>
+    </File>
+    <File Include="images/fonts/fontawesome-webfont93e3.woff2">
+      <publishTime>02/02/2017 10:22:09</publishTime>
+    </File>
+    <File Include="images/fonts/fontawesome-webfontd41d.eot">
+      <publishTime>02/02/2017 10:22:09</publishTime>
+    </File>
+    <File Include="images/fonts/FontAwesome.otf">
+      <publishTime>11/05/2017 10:04:26</publishTime>
+    </File>
+    <File Include="images/fonts/web_Yekan.svg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/fonts/web_Yekan.ttf">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/fonts/web_Yekan.woff">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/fonts/web_Yekand41d.eot">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/gold.png">
+      <publishTime>11/14/2017 16:43:06</publishTime>
+    </File>
+    <File Include="images/gold_kasb.png">
+      <publishTime>12/03/2017 15:49:31</publishTime>
+    </File>
+    <File Include="images/hands.jpg">
+      <publishTime>12/10/2017 12:21:26</publishTime>
+    </File>
+    <File Include="images/koodak.jpg">
+      <publishTime>12/05/2017 14:33:33</publishTime>
+    </File>
+    <File Include="images/loader.gif">
+      <publishTime>12/12/2017 17:13:27</publishTime>
+    </File>
+    <File Include="images/logo.png">
+      <publishTime>12/04/2017 16:06:52</publishTime>
+    </File>
+    <File Include="images/manager.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/moraqebat.jpg">
+      <publishTime>12/10/2017 10:29:06</publishTime>
+    </File>
+    <File Include="images/pager.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/partner/1.png">
+      <publishTime>11/06/2017 10:19:03</publishTime>
+    </File>
+    <File Include="images/partner/11.png">
+      <publishTime>11/06/2017 10:19:04</publishTime>
+    </File>
+    <File Include="images/partner/12.png">
+      <publishTime>11/06/2017 10:19:03</publishTime>
+    </File>
+    <File Include="images/partner/2.png">
+      <publishTime>11/06/2017 10:19:03</publishTime>
+    </File>
+    <File Include="images/partner/3.png">
+      <publishTime>11/06/2017 10:19:03</publishTime>
+    </File>
+    <File Include="images/partner/4.png">
+      <publishTime>11/06/2017 10:19:03</publishTime>
+    </File>
+    <File Include="images/partner/5.png">
+      <publishTime>11/06/2017 10:19:04</publishTime>
+    </File>
+    <File Include="images/partner/6.png">
+      <publishTime>11/06/2017 10:19:04</publishTime>
+    </File>
+    <File Include="images/partner/7.png">
+      <publishTime>11/06/2017 10:19:04</publishTime>
+    </File>
+    <File Include="images/partner/8.png">
+      <publishTime>11/06/2017 10:19:04</publishTime>
+    </File>
+    <File Include="images/partner/anjoman.png">
+      <publishTime>12/04/2017 10:38:31</publishTime>
+    </File>
+    <File Include="images/partner/behdaroo.png">
+      <publishTime>12/04/2017 10:38:31</publishTime>
+    </File>
+    <File Include="images/partner/behzisti.png">
+      <publishTime>12/04/2017 10:44:38</publishTime>
+    </File>
+    <File Include="images/partner/bonyad.png">
+      <publishTime>12/04/2017 10:44:38</publishTime>
+    </File>
+    <File Include="images/partner/camvar.png">
+      <publishTime>12/04/2017 10:38:31</publishTime>
+    </File>
+    <File Include="images/partner/emri.png">
+      <publishTime>12/04/2017 10:38:31</publishTime>
+    </File>
+    <File Include="images/partner/habitat.png">
+      <publishTime>12/04/2017 10:44:38</publishTime>
+    </File>
+    <File Include="images/partner/hamrahaval.png">
+      <publishTime>12/04/2017 10:44:38</publishTime>
+    </File>
+    <File Include="images/partner/mehregan.png">
+      <publishTime>12/04/2017 10:38:31</publishTime>
+    </File>
+    <File Include="images/partner/naft.png">
+      <publishTime>12/04/2017 10:44:38</publishTime>
+    </File>
+    <File Include="images/partner/oncall.png">
+      <publishTime>12/04/2017 10:38:31</publishTime>
+    </File>
+    <File Include="images/partner/roshana.png">
+      <publishTime>12/04/2017 10:44:38</publishTime>
+    </File>
+    <File Include="images/partner/shahid.png">
+      <publishTime>12/04/2017 10:44:38</publishTime>
+    </File>
+    <File Include="images/partner/tasnim.png">
+      <publishTime>12/04/2017 10:38:31</publishTime>
+    </File>
+    <File Include="images/partner/unisef.png">
+      <publishTime>12/04/2017 10:44:38</publishTime>
+    </File>
+    <File Include="images/partner/unitednations.png">
+      <publishTime>12/04/2017 10:44:38</publishTime>
+    </File>
+    <File Include="images/partner/yas.png">
+      <publishTime>12/04/2017 10:38:31</publishTime>
+    </File>
+    <File Include="images/sec1.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/sec2.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/sec23.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/sercices.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/silver.png">
+      <publishTime>11/14/2017 14:43:50</publishTime>
+    </File>
+    <File Include="images/silver_kasb.png">
+      <publishTime>12/03/2017 15:48:59</publishTime>
+    </File>
+    <File Include="images/social/Cloob.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/social/facebook.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/social/Facenama.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/social/google.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/social/linkedin.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/social/linkpad.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/social/twitter.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/student.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/stuff.png">
+      <publishTime>12/04/2017 16:07:43</publishTime>
+    </File>
+    <File Include="images/support-billingportal.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/taqzie.jpg">
+      <publishTime>12/10/2017 11:23:14</publishTime>
+    </File>
+    <File Include="images/taqzieh.jpg">
+      <publishTime>12/10/2017 17:16:10</publishTime>
+    </File>
+    <File Include="images/teacher.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/varzesh.jpg">
+      <publishTime>12/10/2017 10:51:57</publishTime>
+    </File>
+    <File Include="images/works/1.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/2.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/3.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/4.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/5.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/6.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/724market.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/aryafile.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/autobacklink.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/ballyhoo.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/dastbekarsho.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/ekaar.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/elmin.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/everex.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/fantachrome.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/fhonar.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/fiload.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/moshavere24.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/nafisfile.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/niazjoo-product.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/niazmandeeha.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/pcarena.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/sekeparsian.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/shadname.ir.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/sitealver.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/sitesaz.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/th-niazjoo-product.png">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/works/toosniaz.jpg">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="images/zanan.jpg">
+      <publishTime>12/10/2017 11:15:03</publishTime>
+    </File>
+    <File Include="images/Ø®Ø¯Ù&#xD;&#xA;Ø§Øª_Ø·Ø±Ø§Ø­Û_ÙØ±ÙØ´Ú¯Ø§Ù_Ù_Ø³Ø§ÛØª_Ø§ÛÙØªØ±ÙØªÛ.html">
+      <publishTime>02/02/2017 10:22:09</publishTime>
+    </File>
+    <File Include="images/Ø·Ø±Ø§Ø­Û_Ø­Ø±ÙÙ_Ø§Û_Ø³Ø§ÛØª_Ø¯Ø±_Ù&#xD;&#xA;Ø´ÙØ¯.html">
+      <publishTime>02/02/2017 10:22:09</publishTime>
+    </File>
+    <File Include="images/سفارش-طراحی-سایت-مشهد.png">
+      <publishTime>02/02/2017 10:22:09</publishTime>
+    </File>
+    <File Include="images/طراحی-سایت-مشهد-وبتینا.jpg">
+      <publishTime>02/02/2017 10:22:09</publishTime>
+    </File>
+    <File Include="images/کسب-درآمد-از-وبسایت-تجاری.png">
+      <publishTime>02/02/2017 10:22:09</publishTime>
+    </File>
+    <File Include="js/bootstrap/bootstrap.min.js">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="js/doubletaptogo.js">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="js/functions.js">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="js/jquery-3.2.1.slim.min.js">
+      <publishTime>12/04/2017 16:06:00</publishTime>
+    </File>
+    <File Include="js/jquery.min.js">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="js/o.js">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="js/owlcarousel/assets/owl.carousel.css">
+      <publishTime>01/31/2017 16:14:56</publishTime>
+    </File>
+    <File Include="js/owlcarousel/assets/owl.video.play.png">
+      <publishTime>01/31/2017 16:14:58</publishTime>
+    </File>
+    <File Include="js/owlcarousel/owl.carousel.min.js">
+      <publishTime>01/31/2017 16:14:58</publishTime>
+    </File>
+    <File Include="js/popper.min.js">
+      <publishTime>12/04/2017 16:06:00</publishTime>
+    </File>
+    <File Include="js/swiper.js">
+      <publishTime>11/06/2017 09:52:32</publishTime>
+    </File>
+    <File Include="js/swiper.min.js">
+      <publishTime>11/06/2017 09:52:32</publishTime>
+    </File>
+    <File Include="js/waypoints/jquery.waypoints.min.js">
+      <publishTime>01/31/2017 16:14:58</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>02/05/2017 10:00:06</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/p.pubxml.user">
+      <publishTime>12/13/2017 11:51:44</publishTime>
+    </File>
+    <File Include="revolution/assets/coloredbg.png">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/assets/gridtile.png">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/assets/gridtile_3x3.png">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/assets/gridtile_3x3_white.png">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/assets/gridtile_white.png">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/assets/loader.gif">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/css/closedhand.cur">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/css/layers.css">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/css/navigation.css">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/css/openhand.cur">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/css/settings.css">
+      <publishTime>11/01/2017 13:40:58</publishTime>
+    </File>
+    <File Include="revolution/fonts/fontawesome-webfont.eot">
+      <publishTime>11/05/2017 10:07:08</publishTime>
+    </File>
+    <File Include="revolution/fonts/fontawesome-webfont.svg">
+      <publishTime>11/05/2017 10:07:08</publishTime>
+    </File>
+    <File Include="revolution/fonts/fontawesome-webfont.ttf">
+      <publishTime>11/05/2017 10:07:08</publishTime>
+    </File>
+    <File Include="revolution/fonts/fontawesome-webfont.woff">
+      <publishTime>11/05/2017 10:07:08</publishTime>
+    </File>
+    <File Include="revolution/fonts/fontawesome-webfont.woff2">
+      <publishTime>11/05/2017 10:07:08</publishTime>
+    </File>
+    <File Include="revolution/fonts/FontAwesome.otf">
+      <publishTime>11/05/2017 10:07:08</publishTime>
+    </File>
+    <File Include="revolution/fonts/revicons/revicons90c6-2.html">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/fonts/revicons/revicons90c6-3.html">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/fonts/revicons/revicons90c6-4.html">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/fonts/revicons/revicons90c6.html">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/images/gradient/g30.png">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/images/gradient/g40.png">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/js/extensions/revolution.extension.layeranimation.min.js">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/js/extensions/revolution.extension.navigation.min.js">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/js/extensions/revolution.extension.slideanims.min.js">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/js/jquery.themepunch.revolution.min838f.js">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="revolution/js/jquery.themepunch.tools.min838f.js">
+      <publishTime>01/31/2017 16:15:00</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>02/05/2017 10:00:06</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>02/05/2017 10:00:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>02/05/2017 10:00:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>02/05/2017 10:00:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>02/05/2017 10:00:08</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>02/05/2017 10:00:08</publishTime>
+    </File>
+    <File Include="Service References/zarinpal/HamiDiabet.zarinpal.GetUnverifiedTransactionsResponse.datasource">
+      <publishTime>02/02/2017 11:18:32</publishTime>
+    </File>
+    <File Include="Service References/zarinpal/HamiDiabet.zarinpal.PaymentRequestResponse.datasource">
+      <publishTime>02/02/2017 11:18:32</publishTime>
+    </File>
+    <File Include="Service References/zarinpal/HamiDiabet.zarinpal.PaymentRequestWithExtraResponse.datasource">
+      <publishTime>02/02/2017 11:18:32</publishTime>
+    </File>
+    <File Include="Service References/zarinpal/HamiDiabet.zarinpal.PaymentVerificationResponse.datasource">
+      <publishTime>02/02/2017 11:18:32</publishTime>
+    </File>
+    <File Include="Service References/zarinpal/HamiDiabet.zarinpal.PaymentVerificationWithExtraResponse.datasource">
+      <publishTime>02/02/2017 11:18:32</publishTime>
+    </File>
+    <File Include="Service References/zarinpal/HamiDiabet.zarinpal.RefreshAuthorityResponse.datasource">
+      <publishTime>02/02/2017 11:18:32</publishTime>
+    </File>
+    <File Include="video/ansolin.mp4">
+      <publishTime>12/16/2017 10:05:56</publishTime>
+    </File>
+    <File Include="video/diabet12.mp4">
+      <publishTime>12/16/2017 10:11:11</publishTime>
+    </File>
+    <File Include="video/glokoz.mp4">
+      <publishTime>12/10/2017 15:02:20</publishTime>
+    </File>
+    <File Include="video/mov_bbb.mp4">
+      <publishTime>11/08/2017 14:05:58</publishTime>
+    </File>
+    <File Include="video/pankeras.mp4">
+      <publishTime>12/10/2017 15:02:20</publishTime>
+    </File>
+    <File Include="Views/Home/Agent.cshtml">
+      <publishTime>02/02/2017 15:05:55</publishTime>
+    </File>
+    <File Include="Views/Home/Articles.cshtml">
+      <publishTime>12/11/2017 18:05:19</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>12/19/2017 17:04:05</publishTime>
+    </File>
+    <File Include="Views/Home/LoginPage.cshtml">
+      <publishTime>12/04/2017 16:31:32</publishTime>
+    </File>
+    <File Include="Views/Home/Order.cshtml">
+      <publishTime>02/02/2017 14:36:23</publishTime>
+    </File>
+    <File Include="Views/Home/OrderResult.cshtml">
+      <publishTime>02/02/2017 14:36:19</publishTime>
+    </File>
+    <File Include="Views/Shared/_Footer.cshtml">
+      <publishTime>12/11/2017 17:52:33</publishTime>
+    </File>
+    <File Include="Views/Shared/_Header.cshtml">
+      <publishTime>12/12/2017 17:04:53</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>12/13/2017 10:46:32</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>12/12/2017 14:14:20</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>02/05/2017 10:00:08</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/19/2017 17:05:22</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

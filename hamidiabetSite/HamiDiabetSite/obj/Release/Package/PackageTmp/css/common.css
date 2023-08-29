@@ -1,0 +1,97 @@
+﻿.vertical-5px {
+    display: block;
+    clear: both;
+    height: 5px;
+}
+
+.vertical-10px {
+    display: block;
+    clear: both;
+    height: 10px;
+}
+
+.vertical-15px {
+    display: block;
+    clear: both;
+    height: 15px;
+}
+
+.vertical-20px {
+    display: block;
+    clear: both;
+    height: 20px;
+}
+
+.vertical-25px {
+    display: block;
+    clear: both;
+    height: 25px;
+}
+
+.vertical-30px {
+    display: block;
+    clear: both;
+    height: 30px;
+}
+
+.vertical-40px {
+    display: block;
+    clear: both;
+    height: 40px;
+}
+
+
+.mt-5px {
+    margin-top: 5px !important;
+}
+
+.mt-10px {
+    margin-top: 10px !important;
+}
+
+.mt-15px {
+    margin-top: 15px !important;
+}
+
+.mt-20px {
+    margin-top: 20px !important;
+}
+
+.mt-25px {
+    margin-top: 25px !important;
+}
+
+.mt-30px {
+    margin-top: 30px !important;
+}
+
+
+.mb-15px {
+    margin-bottom: 15px !important;
+}
+
+
+.text-white-by-shadow {
+    font-size: 1em !important;
+    line-height: 2em !important;
+    color: #fff;
+    text-shadow: 1px 1px 2px #333;
+    font-weight: 900;
+}
+
+.yellow-box {
+    font-size: 0.9em !important;
+    background-color: rgba(209, 92, 8, 0.66);
+    padding: 8px 15px 8px 15px;
+    color: #fff;
+    font-weight: 900;
+    line-height: 2.7em;
+}
+.block
+{
+    display:block;
+}
+.text-blue{
+    color:#00a1ff;
+    text-shadow:none;
+}

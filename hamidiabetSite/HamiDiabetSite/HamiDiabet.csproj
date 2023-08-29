@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EAE96F4D-9029-4335-B43C-DA1AA411E824}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HamiDiabet</RootNamespace>
+    <AssemblyName>HamiDiabet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.Tokens">
+      <HintPath>..\..\..\..\CarBoy\carboy_jwt\testwebapi\testwebapi\testwebapi\bin\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\..\..\..\CarBoy\carboy_jwt\JwtWithWebAPI-master\JwtWithWebAPI-master\JwtWithWebAPI\bin\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Net4">
+      <HintPath>..\..\..\..\CarBoy\carboy_jwt\JwtWithWebAPI-master\JwtWithWebAPI-master\JwtWithWebAPI\bin\StructureMap.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Web">
+      <HintPath>..\..\..\..\CarBoy\carboy_jwt\JwtWithWebAPI-master\JwtWithWebAPI-master\JwtWithWebAPI\bin\StructureMap.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.4.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\CarBoy\carboy_jwt\testwebapi\testwebapi\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\CarBoy\carboy_jwt\testwebapi\testwebapi\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\..\..\..\CarBoy\carboy_jwt\JwtWithWebAPI-master\JwtWithWebAPI-master\JwtWithWebAPI\bin\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Thinktecture.IdentityModel.Core">
+      <HintPath>..\..\..\..\CarBoy\carboy_jwt\testwebapi\testwebapi\testwebapi\bin\Thinktecture.IdentityModel.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\images\111.jpg" />
+    <Content Include="content\images\b-cloud.jpg" />
+    <Content Include="content\images\b-mobile.jpg" />
+    <Content Include="content\images\b-site.jpg" />
+    <Content Include="content\images\b-sms.jpg" />
+    <Content Include="content\images\b-ussd.jpg" />
+    <Content Include="content\images\busines_net.jpg" />
+    <Content Include="content\images\choosing-web-design.jpg" />
+    <Content Include="content\images\select_company.jpg" />
+    <Content Include="content\images\social-networks.jpg" />
+    <Content Include="content\pic\cms-web-design-webtina.png" />
+    <Content Include="content\pic\copyright-webtina.png" />
+    <Content Include="content\pic\sellfile.png" />
+    <Content Include="content\pic\Social-Media-marketing.jpg" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\common.css" />
+    <Content Include="css\sign.css" />
+    <Content Include="css\css.css" />
+    <Content Include="css\w3.css" />
+    <Content Include="css\core.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\swiper.css" />
+    <Content Include="css\swiper.min.css" />
+    <Content Include="diabet.csproj" />
+    <Content Include="fonts\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="fonts\web_Yekan.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\2.jpg" />
+    <Content Include="images\3.jpg" />
+    <Content Include="images\4.jpg" />
+    <Content Include="images\5.jpg" />
+    <Content Include="images\6.jpg" />
+    <Content Include="images\BackHeader.jpg" />
+    <Content Include="images\bg-01.jpg" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\bimarediabeti.jpg" />
+    <Content Include="images\bronze.png" />
+    <Content Include="images\CEO_Site.jpg" />
+    <Content Include="images\child.jpg" />
+    <Content Include="images\clinica.png" />
+    <Content Include="images\content\bg.jpg" />
+    <Content Include="images\content\clinica.png" />
+    <Content Include="images\content\Diabetes.jpg" />
+    <Content Include="images\content\doctors.png" />
+    <Content Include="images\content\etelaResani.jpg" />
+    <Content Include="images\content\hamianHame.jpg" />
+    <Content Include="images\content\hamidiabet.jpg" />
+    <Content Include="images\content\hamidiabet.png" />
+    <Content Include="images\content\images\choosing-web-design.jpg" />
+    <Content Include="images\content\logo.png" />
+    <Content Include="images\content\logo2.png" />
+    <Content Include="images\content\Patient-Support.jpg" />
+    <Content Include="images\content\pic\cms-web-design-webtina.png" />
+    <Content Include="images\content\pic\copyright-webtina.png" />
+    <Content Include="images\content\pic\sellfile.png" />
+    <Content Include="images\content\pic\Social-Media-marketing.jpg" />
+    <Content Include="images\content\shutterstock_127222043.jpg" />
+    <Content Include="images\content\stuff.png" />
+    <Content Include="images\doctor.png" />
+    <Content Include="images\doctors.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\fonts\fontawesome-webfont.svg" />
+    <Content Include="images\fonts\web_Yekan.svg" />
+    <Content Include="images\loader.gif" />
+    <Content Include="images\gold.png" />
+    <Content Include="images\hands.jpg" />
+    <Content Include="images\koodak.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\manager.jpg" />
+    <Content Include="images\pager.png" />
+    <Content Include="images\partner\hamrahaval.png" />
+    <Content Include="images\partner\unitednations.png" />
+    <Content Include="images\partner\shahid.png" />
+    <Content Include="images\partner\naft.png" />
+    <Content Include="images\partner\behzisti.png" />
+    <Content Include="images\partner\unisef.png" />
+    <Content Include="images\partner\bonyad.png" />
+    <Content Include="images\partner\roshana.png" />
+    <Content Include="images\partner\habitat.png" />
+    <Content Include="images\partner\anjoman.png" />
+    <Content Include="images\partner\behdaroo.png" />
+    <Content Include="images\partner\camvar.png" />
+    <Content Include="images\partner\emri.png" />
+    <Content Include="images\partner\mehregan.png" />
+    <Content Include="images\partner\oncall.png" />
+    <Content Include="images\partner\tasnim.png" />
+    <Content Include="images\partner\yas.png" />
+    <Content Include="images\sec1.png" />
+    <Content Include="images\sec2.jpg" />
+    <Content Include="images\sec23.jpg" />
+    <Content Include="images\sercices.jpg" />
+    <Content Include="images\silver.png" />
+    <Content Include="images\social\Cloob.png" />
+    <Content Include="images\social\facebook.png" />
+    <Content Include="images\social\Facenama.png" />
+    <Content Include="images\social\google.png" />
+    <Content Include="images\social\linkedin.png" />
+    <Content Include="images\social\linkpad.png" />
+    <Content Include="images\social\twitter.png" />
+    <Content Include="images\student.jpg" />
+    <Content Include="images\stuff.png" />
+    <Content Include="images\support-billingportal.jpg" />
+    <Content Include="images\taqzieh.jpg" />
+    <Content Include="images\teacher.jpg" />
+    <Content Include="images\works\1.jpg" />
+    <Content Include="images\works\2.jpg" />
+    <Content Include="images\works\3.jpg" />
+    <Content Include="images\works\4.jpg" />
+    <Content Include="images\works\5.jpg" />
+    <Content Include="images\works\6.jpg" />
+    <Content Include="images\works\724market.jpg" />
+    <Content Include="images\works\aryafile.jpg" />
+    <Content Include="images\works\autobacklink.jpg" />
+    <Content Include="images\works\ballyhoo.jpg" />
+    <Content Include="images\works\dastbekarsho.jpg" />
+    <Content Include="images\works\ekaar.jpg" />
+    <Content Include="images\works\elmin.jpg" />
+    <Content Include="images\works\everex.jpg" />
+    <Content Include="images\works\fantachrome.jpg" />
+    <Content Include="images\works\fhonar.jpg" />
+    <Content Include="images\works\fiload.jpg" />
+    <Content Include="images\works\moshavere24.jpg" />
+    <Content Include="images\works\nafisfile.jpg" />
+    <Content Include="images\works\niazjoo-product.png" />
+    <Content Include="images\works\niazmandeeha.jpg" />
+    <Content Include="images\works\pcarena.jpg" />
+    <Content Include="images\works\sekeparsian.jpg" />
+    <Content Include="images\works\shadname.ir.jpg" />
+    <Content Include="images\works\sitealver.jpg" />
+    <Content Include="images\works\sitesaz.jpg" />
+    <Content Include="images\works\th-niazjoo-product.png" />
+    <Content Include="images\works\toosniaz.jpg" />
+    <Content Include="images\bronz_kasb.png" />
+    <Content Include="images\gold_kasb.png" />
+    <Content Include="images\silver_kasb.png" />
+    <Content Include="images\moraqebat.jpg" />
+    <Content Include="images\varzesh.jpg" />
+    <Content Include="images\zanan.jpg" />
+    <Content Include="js\bootstrap\bootstrap.min.js" />
+    <Content Include="js\doubletaptogo.js" />
+    <Content Include="js\functions.js" />
+    <Content Include="js\jquery-3.2.1.slim.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\o.js" />
+    <Content Include="js\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="js\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="js\owlcarousel\owl.carousel.min.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="js\swiper.js" />
+    <Content Include="js\swiper.min.js" />
+    <Content Include="js\waypoints\jquery.waypoints.min.js" />
+    <Content Include="Properties\PublishProfiles\p.pubxml.user" />
+    <Content Include="revolution\assets\coloredbg.png" />
+    <Content Include="revolution\assets\gridtile.png" />
+    <Content Include="revolution\assets\gridtile_3x3.png" />
+    <Content Include="revolution\assets\gridtile_3x3_white.png" />
+    <Content Include="revolution\assets\gridtile_white.png" />
+    <Content Include="revolution\assets\loader.gif" />
+    <Content Include="revolution\css\closedhand.cur" />
+    <Content Include="revolution\css\layers.css" />
+    <Content Include="revolution\css\navigation.css" />
+    <Content Include="revolution\css\openhand.cur" />
+    <Content Include="revolution\css\settings.css" />
+    <Content Include="revolution\fonts\fontawesome-webfont.svg" />
+    <Content Include="revolution\fonts\revicons\revicons90c6-2.html" />
+    <Content Include="revolution\fonts\revicons\revicons90c6-3.html" />
+    <Content Include="revolution\fonts\revicons\revicons90c6-4.html" />
+    <Content Include="revolution\fonts\revicons\revicons90c6.html" />
+    <Content Include="revolution\images\gradient\g30.png" />
+    <Content Include="revolution\images\gradient\g40.png" />
+    <Content Include="revolution\js\extensions\revolution.extension.layeranimation.min.js" />
+    <Content Include="revolution\js\extensions\revolution.extension.navigation.min.js" />
+    <Content Include="revolution\js\extensions\revolution.extension.slideanims.min.js" />
+    <Content Include="revolution\js\jquery.themepunch.revolution.min838f.js" />
+    <Content Include="revolution\js\jquery.themepunch.tools.min838f.js" />
+    <Content Include="DataAccess.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataAccess.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="images\fonts\fontawesome-webfont.eot" />
+    <Content Include="images\fonts\fontawesome-webfont.ttf" />
+    <Content Include="images\fonts\fontawesome-webfont.woff" />
+    <Content Include="images\fonts\fontawesome-webfont.woff2" />
+    <Content Include="images\fonts\FontAwesome.otf" />
+    <Content Include="fonts\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="fonts\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="fonts\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="fonts\font-awesome\fontawesome-webfont.woff2" />
+    <Content Include="fonts\font-awesome\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\p.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="revolution\fonts\fontawesome-webfont.eot" />
+    <Content Include="revolution\fonts\fontawesome-webfont.ttf" />
+    <Content Include="revolution\fonts\fontawesome-webfont.woff" />
+    <Content Include="revolution\fonts\fontawesome-webfont.woff2" />
+    <Content Include="revolution\fonts\FontAwesome.otf" />
+    <None Include="Service References\zarinpal\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference1.cs</LastGenOutput>
+    </None>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.bootpag.js" />
+    <Content Include="Scripts\jquery.bootpag.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="video\ansolin.mp4" />
+    <Content Include="video\diabet12.mp4" />
+    <Content Include="video\glokoz.mp4" />
+    <Content Include="video\pankeras.mp4" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="ClassCollection\Method.cs" />
+    <Compile Include="ClassCollection\SubString.cs" />
+    <Compile Include="ClassCollection\WebService.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="ClassCollection\User.cs" />
+    <Compile Include="DataAccess.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataAccess.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\ArticleDetail.cs" />
+    <Compile Include="Models\Articles.cs" />
+    <Compile Include="Models\ArticlesResult.cs" />
+    <Compile Include="Models\ErrorPage.cs" />
+    <Compile Include="Models\exception.cs" />
+    <Compile Include="Models\Result.cs" />
+    <Compile Include="Models\SignIn.cs" />
+    <Compile Include="Models\SignUp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\zarinpal\Reference.cs" />
+    <Compile Include="Service References\zarinpal\Reference1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\web_Yekan.ttf" />
+    <Content Include="fonts\web_Yekan.woff" />
+    <Content Include="fonts\web_Yekand41d.eot" />
+    <Content Include="images\fonts\web_Yekan.ttf" />
+    <Content Include="images\fonts\web_Yekan.woff" />
+    <Content Include="images\fonts\web_Yekand41d.eot" />
+    <None Include="Service References\zarinpal\PaymentGatewayImplementationService.wsdl" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\LoginPage.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_HeaderAll.cshtml" />
+    <Content Include="Views\Shared\_FooterAll.cshtml" />
+    <Content Include="Views\Home\SignIn.cshtml" />
+    <Content Include="Views\Home\SignUp.cshtml" />
+    <Content Include="Views\Home\ErrorPage.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataAccess.dbml.layout">
+      <DependentUpon>DataAccess.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63146</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63146/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
