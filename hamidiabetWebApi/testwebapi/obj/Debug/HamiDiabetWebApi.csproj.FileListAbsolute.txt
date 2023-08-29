@@ -1,0 +1,215 @@
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\roslyn\csc.exe
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\roslyn\System.Collections.Immutable.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\roslyn\System.Reflection.Metadata.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\roslyn\vbc.exe
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\roslyn\VBCSCompiler.exe
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\roslyn\VBCSCompiler.exe.config
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\testwebapi.dll.config
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\testwebapi.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\testwebapi.pdb
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.AspNet.Identity.Core.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.IdentityModel.Logging.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.IdentityModel.Tokens.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.Owin.Cors.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.Owin.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.Owin.Security.Cookies.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.Owin.Security.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.Owin.Security.Jwt.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.Owin.Security.OAuth.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Newtonsoft.Json.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Owin.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\System.Net.Http.Formatting.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\System.Web.Cors.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\System.Web.Http.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\System.Web.Http.Owin.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\System.Web.Http.WebHost.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Thinktecture.IdentityModel.Core.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.AspNet.Identity.Core.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.IdentityModel.Logging.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.IdentityModel.Tokens.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.Owin.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.Owin.Cors.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.Owin.Security.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.Owin.Security.Cookies.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.Owin.Security.Jwt.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Microsoft.Owin.Security.OAuth.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Newtonsoft.Json.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\System.Web.Http.Owin.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\Thinktecture.IdentityModel.Core.pdb
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\System.Net.Http.Formatting.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\System.Web.Http.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\bin\System.Web.Http.WebHost.xml
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\obj\Debug\HamiDiabetWebApi.csprojResolveAssemblyReference.cache
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\obj\Debug\testwebapi.dll
+C:\soheila_project\CarBoy\carboy_jwt\testwebapi4\testwebapi\obj\Debug\testwebapi.pdb
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\csc.exe
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\System.Collections.Immutable.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\System.Reflection.Metadata.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\vbc.exe
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\VBCSCompiler.exe
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\VBCSCompiler.exe.config
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\HamiDiabetWebApi.dll.config
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\HamiDiabetWebApi.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\HamiDiabetWebApi.pdb
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Antlr3.Runtime.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.AspNet.Identity.Core.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.IdentityModel.Logging.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.IdentityModel.Tokens.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Cors.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.Cookies.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.Jwt.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.OAuth.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Web.Infrastructure.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Newtonsoft.Json.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Owin.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Net.Http.Formatting.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Cors.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Helpers.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Http.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Http.Owin.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Http.WebHost.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Mvc.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Optimization.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Razor.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.WebPages.Deployment.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.WebPages.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.WebPages.Razor.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Thinktecture.IdentityModel.Core.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\WebGrease.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Antlr3.Runtime.pdb
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.AspNet.Identity.Core.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.IdentityModel.Logging.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.IdentityModel.Tokens.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Cors.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.Cookies.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.Jwt.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.OAuth.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Newtonsoft.Json.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Helpers.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Http.Owin.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Mvc.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Optimization.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Razor.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.WebPages.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.WebPages.Deployment.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.WebPages.Razor.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Thinktecture.IdentityModel.Core.pdb
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Net.Http.Formatting.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Http.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Http.WebHost.xml
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\obj\Debug\HamiDiabetWebApi.csprojResolveAssemblyReference.cache
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\obj\Debug\HamiDiabetWebApi.dll
+C:\soheila_project\HamiDiabet\hamidiabetWebApi\hamidiabetWebApi\testwebapi\obj\Debug\HamiDiabetWebApi.pdb
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\csc.exe
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\vbc.exe
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\VBCSCompiler.exe
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\HamiDiabetWebApi.dll.config
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\HamiDiabetWebApi.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\HamiDiabetWebApi.pdb
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Antlr3.Runtime.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Cors.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Newtonsoft.Json.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Owin.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Net.Http.Formatting.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Cors.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Helpers.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Http.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Http.Owin.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Http.WebHost.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Mvc.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Optimization.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Razor.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.WebPages.Deployment.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.WebPages.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.WebPages.Razor.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Thinktecture.IdentityModel.Core.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\WebGrease.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Antlr3.Runtime.pdb
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Cors.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.Jwt.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Newtonsoft.Json.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Helpers.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Http.Owin.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Mvc.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Optimization.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Razor.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.WebPages.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.WebPages.Deployment.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.WebPages.Razor.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\Thinktecture.IdentityModel.Core.pdb
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Net.Http.Formatting.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Http.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\bin\System.Web.Http.WebHost.xml
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\obj\Debug\HamiDiabetWebApi.csprojAssemblyReference.cache
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\obj\Debug\HamiDiabetWebApi.csproj.CoreCompileInputs.cache
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\obj\Debug\HamiDiabetWebApi.csproj.CopyComplete
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\obj\Debug\HamiDiabetWebApi.dll
+C:\Users\sama laptop\Desktop\961122\hamidiabetWebApi\hamidiabetWebApi\testwebapi\obj\Debug\HamiDiabetWebApi.pdb

@@ -1,0 +1,834 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HamiDiabet" Class="DataAccessDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=172.16.32.33;Initial Catalog=HamiDiabet;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="HamiDiabetConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.cityTbl" Member="cityTbls">
+    <Type Name="cityTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="provinceId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="cityTbl_userTbl" Member="userTbls" ThisKey="Id" OtherKey="cityId" Type="userTbl" />
+      <Association Name="provinceTbl_cityTbl" Member="provinceTbl" ThisKey="provinceId" OtherKey="Id" Type="provinceTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.walletTbl" Member="walletTbls">
+    <Type Name="walletTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="paymentId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="orderId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="toCustomer" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="orderTbl_walletTbl" Member="orderTbl" ThisKey="orderId" OtherKey="Id" Type="orderTbl" IsForeignKey="true" />
+      <Association Name="paymentTbl_walletTbl" Member="paymentTbl" ThisKey="paymentId" OtherKey="Id" Type="paymentTbl" IsForeignKey="true" />
+      <Association Name="userTbl_walletTbl" Member="userTbl" ThisKey="userId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.class_userTbl" Member="class_userTbls">
+    <Type Name="class_userTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="classId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="classTbl_class_userTbl" Member="classTbl" ThisKey="classId" OtherKey="Id" Type="classTbl" IsForeignKey="true" />
+      <Association Name="userTbl_class_userTbl" Member="userTbl" ThisKey="userId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.classDetailTbl" Member="classDetailTbls">
+    <Type Name="classDetailTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="classId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="text" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="fileType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="value" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="pri" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="registerUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="classTbl_classDetailTbl" Member="classTbl" ThisKey="classId" OtherKey="Id" Type="classTbl" IsForeignKey="true" />
+      <Association Name="userTbl_classDetailTbl" Member="userTbl" ThisKey="registerUserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.classGroupTbl" Member="classGroupTbls">
+    <Type Name="classGroupTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="classGroupTbl_classSubGroupTbl" Member="classSubGroupTbls" ThisKey="Id" OtherKey="classGroupId" Type="classSubGroupTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.classSubGroupTbl" Member="classSubGroupTbls">
+    <Type Name="classSubGroupTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="classGroupId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="parentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="classSubGroupTbl_classSubGroupTbl" Member="classSubGroupTbls" ThisKey="Id" OtherKey="parentId" Type="classSubGroupTbl" />
+      <Association Name="classSubGroupTbl_classTbl" Member="classTbls" ThisKey="Id" OtherKey="classSubGroupId" Type="classTbl" />
+      <Association Name="classGroupTbl_classSubGroupTbl" Member="classGroupTbl" ThisKey="classGroupId" OtherKey="Id" Type="classGroupTbl" IsForeignKey="true" />
+      <Association Name="classSubGroupTbl_classSubGroupTbl" Member="classSubGroupTbl1" ThisKey="parentId" OtherKey="Id" Type="classSubGroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.classTbl" Member="classTbls">
+    <Type Name="classTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="startDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="endDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="teacherName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="sessionCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="latitude" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="longitude" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="cityId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Column Name="classSubGroupId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="classTbl_class_userTbl" Member="class_userTbls" ThisKey="Id" OtherKey="classId" Type="class_userTbl" />
+      <Association Name="classTbl_classDetailTbl" Member="classDetailTbls" ThisKey="Id" OtherKey="classId" Type="classDetailTbl" />
+      <Association Name="classTbl_sessionTbl" Member="sessionTbls" ThisKey="Id" OtherKey="classId" Type="sessionTbl" />
+      <Association Name="classSubGroupTbl_classTbl" Member="classSubGroupTbl" ThisKey="classSubGroupId" OtherKey="Id" Type="classSubGroupTbl" IsForeignKey="true" />
+      <Association Name="userTbl_classTbl" Member="userTbl" ThisKey="registerUserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.clinic_practitionTbl" Member="clinic_practitionTbls">
+    <Type Name="clinic_practitionTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="clinicId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="practitionId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="clinicTbl_clinic_practitionTbl" Member="clinicTbl" ThisKey="clinicId" OtherKey="Id" Type="clinicTbl" IsForeignKey="true" />
+      <Association Name="practitionTbl_clinic_practitionTbl" Member="practitionTbl" ThisKey="practitionId" OtherKey="Id" Type="practitionTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.clinic_product_productGroupTbl" Member="clinic_product_productGroupTbls">
+    <Type Name="clinic_product_productGroupTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="clinicId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="productGroupId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="productId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="clinicTbl_clinic_product_productGroupTbl" Member="clinicTbl" ThisKey="clinicId" OtherKey="Id" Type="clinicTbl" IsForeignKey="true" />
+      <Association Name="productGroupTbl_clinic_product_productGroupTbl" Member="productGroupTbl" ThisKey="productGroupId" OtherKey="Id" Type="productGroupTbl" IsForeignKey="true" />
+      <Association Name="productTbl_clinic_product_productGroupTbl" Member="productTbl" ThisKey="productId" OtherKey="Id" Type="productTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.clinic_productTbl" Member="clinic_productTbls">
+    <Type Name="clinic_productTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="clinicId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="productCategoryId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="clinicTbl_clinic_productTbl" Member="clinicTbl" ThisKey="clinicId" OtherKey="Id" Type="clinicTbl" IsForeignKey="true" />
+      <Association Name="productCategoryTbl_clinic_productTbl" Member="productCategoryTbl" ThisKey="productCategoryId" OtherKey="Id" Type="productCategoryTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.clinic_serviceTbl" Member="clinic_serviceTbls">
+    <Type Name="clinic_serviceTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="clinicId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="serviceId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="clinicTbl_clinic_serviceTbl" Member="clinicTbl" ThisKey="clinicId" OtherKey="Id" Type="clinicTbl" IsForeignKey="true" />
+      <Association Name="serviceTbl_clinic_serviceTbl" Member="serviceTbl" ThisKey="serviceId" OtherKey="Id" Type="serviceTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.clinicTbl" Member="clinicTbls">
+    <Type Name="clinicTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="licenceNumber" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Column Name="fax" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Column Name="isAdvisable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="imgSignature" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="imgSignatureFileType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="clinicTbl_clinic_practitionTbl" Member="clinic_practitionTbls" ThisKey="Id" OtherKey="clinicId" Type="clinic_practitionTbl" />
+      <Association Name="clinicTbl_clinic_product_productGroupTbl" Member="clinic_product_productGroupTbls" ThisKey="Id" OtherKey="clinicId" Type="clinic_product_productGroupTbl" />
+      <Association Name="clinicTbl_clinic_productTbl" Member="clinic_productTbls" ThisKey="Id" OtherKey="clinicId" Type="clinic_productTbl" />
+      <Association Name="clinicTbl_clinic_serviceTbl" Member="clinic_serviceTbls" ThisKey="Id" OtherKey="clinicId" Type="clinic_serviceTbl" />
+      <Association Name="userTbl_clinicTbl" Member="userTbl" ThisKey="Id" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contentCommentTbl" Member="contentCommentTbls">
+    <Type Name="contentCommentTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="contentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="fullName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="mobile" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="text" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="confirmUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="contentTbl_contentCommentTbl" Member="contentTbl" ThisKey="contentId" OtherKey="Id" Type="contentTbl" IsForeignKey="true" />
+      <Association Name="userTbl_contentCommentTbl" Member="userTbl" ThisKey="confirmUserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contentDetailTbl" Member="contentDetailTbls">
+    <Type Name="contentDetailTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="contentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="text" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="fileType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="value" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="pri" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="contentTbl_contentDetailTbl" Member="contentTbl" ThisKey="contentId" OtherKey="Id" Type="contentTbl" IsForeignKey="true" />
+      <Association Name="userTbl_contentDetailTbl" Member="userTbl" ThisKey="registerUserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contentGroupTbl" Member="contentGroupTbls">
+    <Type Name="contentGroupTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="contentGroupTbl_contentSubGroupTbl" Member="contentSubGroupTbls" ThisKey="Id" OtherKey="contentGroupId" Type="contentSubGroupTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contentLikeTbl" Member="contentLikeTbls">
+    <Type Name="contentLikeTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="contentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="isLike" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="contentTbl_contentLikeTbl" Member="contentTbl" ThisKey="contentId" OtherKey="Id" Type="contentTbl" IsForeignKey="true" />
+      <Association Name="userTbl_contentLikeTbl" Member="userTbl" ThisKey="UserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contentSubGroupTbl" Member="contentSubGroupTbls">
+    <Type Name="contentSubGroupTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="contentGroupId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="parentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="contentSubGroupTbl_contentSubGroupTbl" Member="contentSubGroupTbls" ThisKey="Id" OtherKey="parentId" Type="contentSubGroupTbl" />
+      <Association Name="contentSubGroupTbl_contentTbl" Member="contentTbls" ThisKey="Id" OtherKey="contentSubGroupId" Type="contentTbl" />
+      <Association Name="contentGroupTbl_contentSubGroupTbl" Member="contentGroupTbl" ThisKey="contentGroupId" OtherKey="Id" Type="contentGroupTbl" IsForeignKey="true" />
+      <Association Name="contentSubGroupTbl_contentSubGroupTbl" Member="contentSubGroupTbl1" ThisKey="parentId" OtherKey="Id" Type="contentSubGroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contentTbl" Member="contentTbls">
+    <Type Name="contentTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="subject" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="isPublish" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="confirmUserId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="contentSubGroupId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="registerUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="contentTbl_contentCommentTbl" Member="contentCommentTbls" ThisKey="Id" OtherKey="contentId" Type="contentCommentTbl" />
+      <Association Name="contentTbl_contentDetailTbl" Member="contentDetailTbls" ThisKey="Id" OtherKey="contentId" Type="contentDetailTbl" />
+      <Association Name="contentTbl_contentLikeTbl" Member="contentLikeTbls" ThisKey="Id" OtherKey="contentId" Type="contentLikeTbl" />
+      <Association Name="contentSubGroupTbl_contentTbl" Member="contentSubGroupTbl" ThisKey="contentSubGroupId" OtherKey="Id" Type="contentSubGroupTbl" IsForeignKey="true" />
+      <Association Name="userTbl_contentTbl" Member="userTbl" ThisKey="registerUserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+      <Association Name="userTbl_contentTbl1" Member="userTbl1" ThisKey="confirmUserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.doctor_product_productGroupTbl" Member="doctor_product_productGroupTbls">
+    <Type Name="doctor_product_productGroupTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="doctorId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="productGroupId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="productId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="doctorTbl_doctor_product_productGroupTbl" Member="doctorTbl" ThisKey="doctorId" OtherKey="Id" Type="doctorTbl" IsForeignKey="true" />
+      <Association Name="productGroupTbl_doctor_product_productGroupTbl" Member="productGroupTbl" ThisKey="productGroupId" OtherKey="Id" Type="productGroupTbl" IsForeignKey="true" />
+      <Association Name="productTbl_doctor_product_productGroupTbl" Member="productTbl" ThisKey="productId" OtherKey="Id" Type="productTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.doctor_productTbl" Member="doctor_productTbls">
+    <Type Name="doctor_productTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="doctorId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="productCategoryId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="doctorTbl_doctor_productTbl" Member="doctorTbl" ThisKey="doctorId" OtherKey="Id" Type="doctorTbl" IsForeignKey="true" />
+      <Association Name="productCategoryTbl_doctor_productTbl" Member="productCategoryTbl" ThisKey="productCategoryId" OtherKey="Id" Type="productCategoryTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.doctor_serviceTbl" Member="doctor_serviceTbls">
+    <Type Name="doctor_serviceTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="doctorId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="serviceId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="doctorTbl_doctor_serviceTbl" Member="doctorTbl" ThisKey="doctorId" OtherKey="Id" Type="doctorTbl" IsForeignKey="true" />
+      <Association Name="serviceTbl_doctor_serviceTbl" Member="serviceTbl" ThisKey="serviceId" OtherKey="Id" Type="serviceTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.doctorTbl" Member="doctorTbls">
+    <Type Name="doctorTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nationalCode" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="medicalCouncilCode" Type="System.String" DbType="NChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="dateOfBirth" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="officePhone" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="gender" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="bankName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="cardBankNumber" Type="System.String" DbType="NChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="isAdvisable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="fromHour" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="toHour" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="imgResume" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="imgResumeFileType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="university" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="practition" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="appntmntPrcWPrescription" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="appntmntPrcWOPrescription" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="appntmntPrcWPrescriptionWContract" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="appntmntPrcWOPrescriptionWOContract" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="doctorTbl_doctor_product_productGroupTbl" Member="doctor_product_productGroupTbls" ThisKey="Id" OtherKey="doctorId" Type="doctor_product_productGroupTbl" />
+      <Association Name="doctorTbl_doctor_productTbl" Member="doctor_productTbls" ThisKey="Id" OtherKey="doctorId" Type="doctor_productTbl" />
+      <Association Name="doctorTbl_doctor_serviceTbl" Member="doctor_serviceTbls" ThisKey="Id" OtherKey="doctorId" Type="doctor_serviceTbl" />
+      <Association Name="doctorTbl_patient_doctorTbl" Member="patient_doctorTbls" ThisKey="Id" OtherKey="doctorId" Type="patient_doctorTbl" />
+      <Association Name="userTbl_doctorTbl" Member="userTbl" ThisKey="Id" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.documentTbl" Member="documentTbls">
+    <Type Name="documentTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="image" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="fileType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="subject" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="text" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="documentDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="doctorName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="documentTypeId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="documentTypeTbl_documentTbl" Member="documentTypeTbl" ThisKey="documentTypeId" OtherKey="Id" Type="documentTypeTbl" IsForeignKey="true" />
+      <Association Name="userTbl_documentTbl" Member="userTbl" ThisKey="userId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.documentTypeTbl" Member="documentTypeTbls">
+    <Type Name="documentTypeTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="roleId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="documentTypeTbl_documentTbl" Member="documentTbls" ThisKey="Id" OtherKey="documentTypeId" Type="documentTbl" />
+      <Association Name="roleTbl_documentTypeTbl" Member="roleTbl" ThisKey="roleId" OtherKey="Id" Type="roleTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.educationTbl" Member="educationTbls">
+    <Type Name="educationTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="educationTbl_patientTbl" Member="patientTbls" ThisKey="Id" OtherKey="educationId" Type="patientTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.equipment_product_productGroupTbl" Member="equipment_product_productGroupTbls">
+    <Type Name="equipment_product_productGroupTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="equipmentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="productGroupId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="productId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="equipmentTbl_equipment_product_productGroupTbl" Member="equipmentTbl" ThisKey="equipmentId" OtherKey="Id" Type="equipmentTbl" IsForeignKey="true" />
+      <Association Name="productGroupTbl_equipment_product_productGroupTbl" Member="productGroupTbl" ThisKey="productGroupId" OtherKey="Id" Type="productGroupTbl" IsForeignKey="true" />
+      <Association Name="productTbl_equipment_product_productGroupTbl" Member="productTbl" ThisKey="productId" OtherKey="Id" Type="productTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.equipment_productTbl" Member="equipment_productTbls">
+    <Type Name="equipment_productTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="equipmentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="productCategoryId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="equipmentTbl_equipment_productTbl" Member="equipmentTbl" ThisKey="equipmentId" OtherKey="Id" Type="equipmentTbl" IsForeignKey="true" />
+      <Association Name="productCategoryTbl_equipment_productTbl" Member="productCategoryTbl" ThisKey="productCategoryId" OtherKey="Id" Type="productCategoryTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.equipment_serviceTbl" Member="equipment_serviceTbls">
+    <Type Name="equipment_serviceTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="equipmentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="serviceId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="equipmentTbl_equipment_serviceTbl" Member="equipmentTbl" ThisKey="equipmentId" OtherKey="Id" Type="equipmentTbl" IsForeignKey="true" />
+      <Association Name="serviceTbl_equipment_serviceTbl" Member="serviceTbl" ThisKey="serviceId" OtherKey="Id" Type="serviceTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.equipmentTbl" Member="equipmentTbls">
+    <Type Name="equipmentTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="companyRegistrationNumber" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Column Name="fax" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="workScope" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="imgSignature" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="imgSignatureFileType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="equipmentTbl_equipment_product_productGroupTbl" Member="equipment_product_productGroupTbls" ThisKey="Id" OtherKey="equipmentId" Type="equipment_product_productGroupTbl" />
+      <Association Name="equipmentTbl_equipment_productTbl" Member="equipment_productTbls" ThisKey="Id" OtherKey="equipmentId" Type="equipment_productTbl" />
+      <Association Name="equipmentTbl_equipment_serviceTbl" Member="equipment_serviceTbls" ThisKey="Id" OtherKey="equipmentId" Type="equipment_serviceTbl" />
+      <Association Name="userTbl_equipmentTbl" Member="userTbl" ThisKey="Id" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.guarantyTypeTbl" Member="guarantyTypeTbls">
+    <Type Name="guarantyTypeTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="guarantyTypeTbl_productTbl" Member="productTbls" ThisKey="Id" OtherKey="garantyTypeId" Type="productTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.insuranceTbl" Member="insuranceTbls">
+    <Type Name="insuranceTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="insuranceTbl_patient_insuranceTbl" Member="patient_insuranceTbls" ThisKey="Id" OtherKey="insuranceId" Type="patient_insuranceTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.message_userGroupTbl" Member="message_userGroupTbls">
+    <Type Name="message_userGroupTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="messageId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="userGroupId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="registerUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="messageTbl_message_userGroupTbl" Member="messageTbl" ThisKey="messageId" OtherKey="Id" Type="messageTbl" IsForeignKey="true" />
+      <Association Name="userGroupTbl_message_userGroupTbl" Member="userGroupTbl" ThisKey="userGroupId" OtherKey="Id" Type="userGroupTbl" IsForeignKey="true" />
+      <Association Name="userTbl_message_userGroupTbl" Member="userTbl" ThisKey="registerUserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.message_userTbl" Member="message_userTbls">
+    <Type Name="message_userTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="subject" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="text" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="isRead" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mobile" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Column Name="registerUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="userTbl_message_userTbl" Member="userTbl" ThisKey="userId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+      <Association Name="userTbl_message_userTbl1" Member="userTbl1" ThisKey="registerUserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.messageTbl" Member="messageTbls">
+    <Type Name="messageTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="subject" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="text" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="messageTbl_message_userGroupTbl" Member="message_userGroupTbls" ThisKey="Id" OtherKey="messageId" Type="message_userGroupTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ngo_product_productGroupTbl" Member="ngo_product_productGroupTbls">
+    <Type Name="ngo_product_productGroupTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ngoId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="productGroupId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="productId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="registerUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="ngoTbl_ngo_product_productGroupTbl" Member="ngoTbl" ThisKey="ngoId" OtherKey="Id" Type="ngoTbl" IsForeignKey="true" />
+      <Association Name="productGroupTbl_ngo_product_productGroupTbl" Member="productGroupTbl" ThisKey="productGroupId" OtherKey="Id" Type="productGroupTbl" IsForeignKey="true" />
+      <Association Name="productTbl_ngo_product_productGroupTbl" Member="productTbl" ThisKey="productId" OtherKey="Id" Type="productTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ngo_productTbl" Member="ngo_productTbls">
+    <Type Name="ngo_productTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ngoId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="productCategoryId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="ngoTbl_ngo_productTbl" Member="ngoTbl" ThisKey="ngoId" OtherKey="Id" Type="ngoTbl" IsForeignKey="true" />
+      <Association Name="productCategoryTbl_ngo_productTbl" Member="productCategoryTbl" ThisKey="productCategoryId" OtherKey="Id" Type="productCategoryTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ngo_serviceTbl" Member="ngo_serviceTbls">
+    <Type Name="ngo_serviceTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ngoId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="serviceId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="ngoTbl_ngo_serviceTbl" Member="ngoTbl" ThisKey="ngoId" OtherKey="Id" Type="ngoTbl" IsForeignKey="true" />
+      <Association Name="serviceTbl_ngo_serviceTbl" Member="serviceTbl" ThisKey="serviceId" OtherKey="Id" Type="serviceTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ngoTbl" Member="ngoTbls">
+    <Type Name="ngoTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ngoName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="companyRegisterationNumber" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="phoneNumber" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Column Name="fax" Type="System.String" DbType="NChar(11)" CanBeNull="true" />
+      <Column Name="workScope" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="cityId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="isAdvisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="imgSignature" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="imgSignatureFileType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="registerUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="ngoTbl_ngo_product_productGroupTbl" Member="ngo_product_productGroupTbls" ThisKey="Id" OtherKey="ngoId" Type="ngo_product_productGroupTbl" />
+      <Association Name="ngoTbl_ngo_productTbl" Member="ngo_productTbls" ThisKey="Id" OtherKey="ngoId" Type="ngo_productTbl" />
+      <Association Name="ngoTbl_ngo_serviceTbl" Member="ngo_serviceTbls" ThisKey="Id" OtherKey="ngoId" Type="ngo_serviceTbl" />
+      <Association Name="userTbl_ngoTbl" Member="userTbl" ThisKey="Id" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.orderTbl" Member="orderTbls">
+    <Type Name="orderTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="packageId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="payStatus" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="cancelReason" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="cancelerId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="longitude" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="addressTitle" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="houseNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="houseUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="discount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="priceWithDiscount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="userFamily" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="userMobile" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cancelDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="orderTbl_walletTbl" Member="walletTbls" ThisKey="Id" OtherKey="orderId" Type="walletTbl" />
+      <Association Name="packageTbl_orderTbl" Member="packageTbl" ThisKey="packageId" OtherKey="Id" Type="packageTbl" IsForeignKey="true" />
+      <Association Name="userTbl_orderTbl" Member="userTbl" ThisKey="userId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+      <Association Name="userTbl_orderTbl1" Member="userTbl1" ThisKey="cancelerId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.packageTbl" Member="packageTbls">
+    <Type Name="packageTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="fileType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="value" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="description" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="discount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="tax" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="packageTbl_orderTbl" Member="orderTbls" ThisKey="Id" OtherKey="packageId" Type="orderTbl" />
+      <Association Name="roleTbl_packageTbl" Member="roleTbl" ThisKey="RoleId" OtherKey="Id" Type="roleTbl" IsForeignKey="true" />
+      <Association Name="userTbl_packageTbl" Member="userTbl" ThisKey="registerUserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.patient_doctorTbl" Member="patient_doctorTbls">
+    <Type Name="patient_doctorTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="patientId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doctorId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="doctorTbl_patient_doctorTbl" Member="doctorTbl" ThisKey="doctorId" OtherKey="Id" Type="doctorTbl" IsForeignKey="true" />
+      <Association Name="patientTbl_patient_doctorTbl" Member="patientTbl" ThisKey="patientId" OtherKey="Id" Type="patientTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.patient_insuranceTbl" Member="patient_insuranceTbls">
+    <Type Name="patient_insuranceTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="patientId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="insuranceId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="insuranceTbl_patient_insuranceTbl" Member="insuranceTbl" ThisKey="insuranceId" OtherKey="Id" Type="insuranceTbl" IsForeignKey="true" />
+      <Association Name="patientTbl_patient_insuranceTbl" Member="patientTbl" ThisKey="patientId" OtherKey="Id" Type="patientTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.patientTbl" Member="patientTbls">
+    <Type Name="patientTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="family" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="fatherName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="nationalCode" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="birthDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="birthPlace" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ExportCity" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="IdentityCode" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="isPatient" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="passportCode" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="isMarried" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="gender" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="isHeadFamily" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="countFamily" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="educationId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="studyField" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="isStudent" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="isInsurance" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="patientTbl_patient_doctorTbl" Member="patient_doctorTbls" ThisKey="Id" OtherKey="patientId" Type="patient_doctorTbl" />
+      <Association Name="patientTbl_patient_insuranceTbl" Member="patient_insuranceTbls" ThisKey="Id" OtherKey="patientId" Type="patient_insuranceTbl" />
+      <Association Name="educationTbl_patientTbl" Member="educationTbl" ThisKey="educationId" OtherKey="Id" Type="educationTbl" IsForeignKey="true" />
+      <Association Name="userTbl_patientTbl" Member="userTbl" ThisKey="Id" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.paymentTbl" Member="paymentTbls">
+    <Type Name="paymentTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="refId" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="authority" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="userFamily" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="userMobile" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Association Name="paymentTbl_walletTbl" Member="walletTbls" ThisKey="Id" OtherKey="paymentId" Type="walletTbl" />
+      <Association Name="userTbl_paymentTbl" Member="userTbl" ThisKey="userId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.permissionTbl" Member="permissionTbls">
+    <Type Name="permissionTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="permissionTbl_role_permissionTbl" Member="role_permissionTbls" ThisKey="Id" OtherKey="permissionId" Type="role_permissionTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.practitionTbl" Member="practitionTbls">
+    <Type Name="practitionTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="practitionTbl_clinic_practitionTbl" Member="clinic_practitionTbls" ThisKey="Id" OtherKey="practitionId" Type="clinic_practitionTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.productCategoryTbl" Member="productCategoryTbls">
+    <Type Name="productCategoryTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="parentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="productCategoryTbl_clinic_productTbl" Member="clinic_productTbls" ThisKey="Id" OtherKey="productCategoryId" Type="clinic_productTbl" />
+      <Association Name="productCategoryTbl_doctor_productTbl" Member="doctor_productTbls" ThisKey="Id" OtherKey="productCategoryId" Type="doctor_productTbl" />
+      <Association Name="productCategoryTbl_equipment_productTbl" Member="equipment_productTbls" ThisKey="Id" OtherKey="productCategoryId" Type="equipment_productTbl" />
+      <Association Name="productCategoryTbl_ngo_productTbl" Member="ngo_productTbls" ThisKey="Id" OtherKey="productCategoryId" Type="ngo_productTbl" />
+      <Association Name="productCategoryTbl_productTbl" Member="productTbls" ThisKey="Id" OtherKey="productCategoryId" Type="productTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.productGroupTbl" Member="productGroupTbls">
+    <Type Name="productGroupTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="productGroupTbl_clinic_product_productGroupTbl" Member="clinic_product_productGroupTbls" ThisKey="Id" OtherKey="productGroupId" Type="clinic_product_productGroupTbl" />
+      <Association Name="productGroupTbl_doctor_product_productGroupTbl" Member="doctor_product_productGroupTbls" ThisKey="Id" OtherKey="productGroupId" Type="doctor_product_productGroupTbl" />
+      <Association Name="productGroupTbl_equipment_product_productGroupTbl" Member="equipment_product_productGroupTbls" ThisKey="Id" OtherKey="productGroupId" Type="equipment_product_productGroupTbl" />
+      <Association Name="productGroupTbl_ngo_product_productGroupTbl" Member="ngo_product_productGroupTbls" ThisKey="Id" OtherKey="productGroupId" Type="ngo_product_productGroupTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.productTbl" Member="productTbls">
+    <Type Name="productTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="isGaranty" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="garantyTypeId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="productCategoryId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="productTbl_clinic_product_productGroupTbl" Member="clinic_product_productGroupTbls" ThisKey="Id" OtherKey="productId" Type="clinic_product_productGroupTbl" />
+      <Association Name="productTbl_doctor_product_productGroupTbl" Member="doctor_product_productGroupTbls" ThisKey="Id" OtherKey="productId" Type="doctor_product_productGroupTbl" />
+      <Association Name="productTbl_equipment_product_productGroupTbl" Member="equipment_product_productGroupTbls" ThisKey="Id" OtherKey="productId" Type="equipment_product_productGroupTbl" />
+      <Association Name="productTbl_ngo_product_productGroupTbl" Member="ngo_product_productGroupTbls" ThisKey="Id" OtherKey="productId" Type="ngo_product_productGroupTbl" />
+      <Association Name="guarantyTypeTbl_productTbl" Member="guarantyTypeTbl" ThisKey="garantyTypeId" OtherKey="Id" Type="guarantyTypeTbl" IsForeignKey="true" />
+      <Association Name="productCategoryTbl_productTbl" Member="productCategoryTbl" ThisKey="productCategoryId" OtherKey="Id" Type="productCategoryTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.provinceTbl" Member="provinceTbls">
+    <Type Name="provinceTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="provinceTbl_cityTbl" Member="cityTbls" ThisKey="Id" OtherKey="provinceId" Type="cityTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.role_permissionTbl" Member="role_permissionTbls">
+    <Type Name="role_permissionTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="permissionId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="roleId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="permissionTbl_role_permissionTbl" Member="permissionTbl" ThisKey="permissionId" OtherKey="Id" Type="permissionTbl" IsForeignKey="true" />
+      <Association Name="roleTbl_role_permissionTbl" Member="roleTbl" ThisKey="roleId" OtherKey="Id" Type="roleTbl" IsForeignKey="true" />
+      <Association Name="userTbl_role_permissionTbl" Member="userTbl" ThisKey="registerUserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.roleTbl" Member="roleTbls">
+    <Type Name="roleTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="roleTbl_documentTypeTbl" Member="documentTypeTbls" ThisKey="Id" OtherKey="roleId" Type="documentTypeTbl" />
+      <Association Name="roleTbl_packageTbl" Member="packageTbls" ThisKey="Id" OtherKey="RoleId" Type="packageTbl" />
+      <Association Name="roleTbl_role_permissionTbl" Member="role_permissionTbls" ThisKey="Id" OtherKey="roleId" Type="role_permissionTbl" />
+      <Association Name="roleTbl_userTbl" Member="userTbls" ThisKey="Id" OtherKey="roleId" Type="userTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.serviceTbl" Member="serviceTbls">
+    <Type Name="serviceTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="serviceTbl_clinic_serviceTbl" Member="clinic_serviceTbls" ThisKey="Id" OtherKey="serviceId" Type="clinic_serviceTbl" />
+      <Association Name="serviceTbl_doctor_serviceTbl" Member="doctor_serviceTbls" ThisKey="Id" OtherKey="serviceId" Type="doctor_serviceTbl" />
+      <Association Name="serviceTbl_equipment_serviceTbl" Member="equipment_serviceTbls" ThisKey="Id" OtherKey="serviceId" Type="equipment_serviceTbl" />
+      <Association Name="serviceTbl_ngo_serviceTbl" Member="ngo_serviceTbls" ThisKey="Id" OtherKey="serviceId" Type="ngo_serviceTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sessionTbl" Member="sessionTbls">
+    <Type Name="sessionTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="subject" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="classId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="startTime" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="endTime" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="registerUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="classTbl_sessionTbl" Member="classTbl" ThisKey="classId" OtherKey="Id" Type="classTbl" IsForeignKey="true" />
+      <Association Name="userTbl_sessionTbl" Member="userTbl" ThisKey="registerUserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.settingTbl" Member="settingTbls">
+    <Type Name="settingTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tokenTbl" Member="tokenTbls">
+    <Type Name="tokenTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ownerUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="accessTokenHash" Type="System.String" DbType="NVarChar(800) NOT NULL" CanBeNull="false" />
+      <Column Name="accessTokenExpirationDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="refreshTokenIdHash" Type="System.String" DbType="NVarChar(800) NOT NULL" CanBeNull="false" />
+      <Column Name="subject" Type="System.String" DbType="NVarChar(800) NOT NULL" CanBeNull="false" />
+      <Column Name="refreshTokenExpiresUtc" Type="System.String" DbType="NVarChar(800) NOT NULL" CanBeNull="false" />
+      <Column Name="refreshToken" Type="System.String" DbType="NVarChar(800) NOT NULL" CanBeNull="false" />
+      <Association Name="userTbl_tokenTbl" Member="userTbl" ThisKey="ownerUserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.user_userGroupTbl" Member="user_userGroupTbls">
+    <Type Name="user_userGroupTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userGroupId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="userGroupTbl_user_userGroupTbl" Member="userGroupTbl" ThisKey="userGroupId" OtherKey="Id" Type="userGroupTbl" IsForeignKey="true" />
+      <Association Name="userTbl_user_userGroupTbl" Member="userTbl" ThisKey="userId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+      <Association Name="userTbl_user_userGroupTbl1" Member="userTbl1" ThisKey="registerUserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.userGroupTbl" Member="userGroupTbls">
+    <Type Name="userGroupTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="parentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="userGroupTbl_message_userGroupTbl" Member="message_userGroupTbls" ThisKey="Id" OtherKey="userGroupId" Type="message_userGroupTbl" />
+      <Association Name="userGroupTbl_user_userGroupTbl" Member="user_userGroupTbls" ThisKey="Id" OtherKey="userGroupId" Type="user_userGroupTbl" />
+      <Association Name="userGroupTbl_userGroupTbl" Member="userGroupTbls" ThisKey="Id" OtherKey="parentId" Type="userGroupTbl" />
+      <Association Name="userGroupTbl_userGroupTbl" Member="userGroupTbl1" ThisKey="parentId" OtherKey="Id" Type="userGroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.userTbl" Member="userTbls">
+    <Type Name="userTbl">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="family" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="mobile" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="imgPersonal" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="imgPersonalFileType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lastActivityDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="isConfirm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="confirmUserId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="website" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="postalCode" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="wallet" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="roleId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="subscribeNewsletter" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="cityId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="serialNumber" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ticket" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="hashAccessToken" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hashRefreshToken" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="userTbl_walletTbl" Member="walletTbls" ThisKey="Id" OtherKey="userId" Type="walletTbl" />
+      <Association Name="userTbl_class_userTbl" Member="class_userTbls" ThisKey="Id" OtherKey="userId" Type="class_userTbl" />
+      <Association Name="userTbl_classDetailTbl" Member="classDetailTbls" ThisKey="Id" OtherKey="registerUserId" Type="classDetailTbl" />
+      <Association Name="userTbl_classTbl" Member="classTbls" ThisKey="Id" OtherKey="registerUserId" Type="classTbl" />
+      <Association Name="userTbl_clinicTbl" Member="clinicTbl" ThisKey="Id" OtherKey="Id" Type="clinicTbl" Cardinality="One" />
+      <Association Name="userTbl_contentCommentTbl" Member="contentCommentTbls" ThisKey="Id" OtherKey="confirmUserId" Type="contentCommentTbl" />
+      <Association Name="userTbl_contentDetailTbl" Member="contentDetailTbls" ThisKey="Id" OtherKey="registerUserId" Type="contentDetailTbl" />
+      <Association Name="userTbl_contentLikeTbl" Member="contentLikeTbls" ThisKey="Id" OtherKey="UserId" Type="contentLikeTbl" />
+      <Association Name="userTbl_contentTbl" Member="contentTbls" ThisKey="Id" OtherKey="registerUserId" Type="contentTbl" />
+      <Association Name="userTbl_contentTbl1" Member="contentTbls1" ThisKey="Id" OtherKey="confirmUserId" Type="contentTbl" />
+      <Association Name="userTbl_doctorTbl" Member="doctorTbl" ThisKey="Id" OtherKey="Id" Type="doctorTbl" Cardinality="One" />
+      <Association Name="userTbl_documentTbl" Member="documentTbls" ThisKey="Id" OtherKey="userId" Type="documentTbl" />
+      <Association Name="userTbl_equipmentTbl" Member="equipmentTbl" ThisKey="Id" OtherKey="Id" Type="equipmentTbl" Cardinality="One" />
+      <Association Name="userTbl_message_userGroupTbl" Member="message_userGroupTbls" ThisKey="Id" OtherKey="registerUserId" Type="message_userGroupTbl" />
+      <Association Name="userTbl_message_userTbl" Member="message_userTbls" ThisKey="Id" OtherKey="userId" Type="message_userTbl" />
+      <Association Name="userTbl_message_userTbl1" Member="message_userTbls1" ThisKey="Id" OtherKey="registerUserId" Type="message_userTbl" />
+      <Association Name="userTbl_ngoTbl" Member="ngoTbl" ThisKey="Id" OtherKey="Id" Type="ngoTbl" Cardinality="One" />
+      <Association Name="userTbl_orderTbl" Member="orderTbls" ThisKey="Id" OtherKey="userId" Type="orderTbl" />
+      <Association Name="userTbl_orderTbl1" Member="orderTbls1" ThisKey="Id" OtherKey="cancelerId" Type="orderTbl" />
+      <Association Name="userTbl_packageTbl" Member="packageTbls" ThisKey="Id" OtherKey="registerUserId" Type="packageTbl" />
+      <Association Name="userTbl_patientTbl" Member="patientTbl" ThisKey="Id" OtherKey="Id" Type="patientTbl" Cardinality="One" />
+      <Association Name="userTbl_paymentTbl" Member="paymentTbls" ThisKey="Id" OtherKey="userId" Type="paymentTbl" />
+      <Association Name="userTbl_role_permissionTbl" Member="role_permissionTbls" ThisKey="Id" OtherKey="registerUserId" Type="role_permissionTbl" />
+      <Association Name="userTbl_sessionTbl" Member="sessionTbls" ThisKey="Id" OtherKey="registerUserId" Type="sessionTbl" />
+      <Association Name="userTbl_tokenTbl" Member="tokenTbls" ThisKey="Id" OtherKey="ownerUserId" Type="tokenTbl" />
+      <Association Name="userTbl_user_userGroupTbl" Member="user_userGroupTbls" ThisKey="Id" OtherKey="userId" Type="user_userGroupTbl" />
+      <Association Name="userTbl_user_userGroupTbl1" Member="user_userGroupTbls1" ThisKey="Id" OtherKey="registerUserId" Type="user_userGroupTbl" />
+      <Association Name="userTbl_userTbl" Member="userTbls" ThisKey="Id" OtherKey="confirmUserId" Type="userTbl" />
+      <Association Name="cityTbl_userTbl" Member="cityTbl" ThisKey="cityId" OtherKey="Id" Type="cityTbl" IsForeignKey="true" />
+      <Association Name="roleTbl_userTbl" Member="roleTbl" ThisKey="roleId" OtherKey="Id" Type="roleTbl" IsForeignKey="true" />
+      <Association Name="userTbl_userTbl" Member="userTbl1" ThisKey="confirmUserId" OtherKey="Id" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
