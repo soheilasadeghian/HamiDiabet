@@ -12,7 +12,7 @@ _HamiDiabet Website project as a client in root of repository(hamidiabetSite Fol
 _Rest Api project in root of repository(hamidiabetWebApi Folder)
     hamidiabetWebApi is a Rest Api shows how to implement JSON Web Token authentication with ASP.NET MVC 5, Web Api 2,.Net Framework 4.5
 
-![alt text](https://github.com/soheilasadeghian/HamiDiabet/blob/main/HamiDiabet/image/rest.png?raw=true)
+![alt text](https://github.com/soheilasadeghian/HamiDiabet/blob/main/image/rest.png)
 
 ## Steps:
 1. Restore DB in SQL Server from the DB file in root of repository <br/>
