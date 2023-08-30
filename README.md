@@ -42,12 +42,12 @@ function of set Sha256Hash is in: [`here`](https://github.com/soheilasadeghian/H
 
 
 ## The Auth server exposes the following endpoints:
-•	http://host/user/SignUp to register the user
-•	http://host/user/signIn to login the user and generate the initial set of access token and refresh token
-•	http://host/user/SignOut to register the user
-•	http://host/user/signIn to refresh the access token using the refresh token sent
+- http://host/user/SignUp to register the user
+- http://host/user/signIn to login the user and generate the initial set of access token and refresh token
+- http://host/user/SignOut to register the user
+- http://host/user/signIn to refresh the access token using the refresh token sent
 
-SignUp Help:
+```SignUp Help:
 WebRequest:http://host/user/SignUp
 Method:POST
 ContentType: application/x-www-form-urlencoded
@@ -58,7 +58,7 @@ requestBody:
 •	{mobile}: mobile num
 •	{password}: password
 •	{subscribeNewsletter}: subscribe newsletter (true or false)
-
+```
 
 signIn Help:
 WebRequest:http://host/user/signIn
