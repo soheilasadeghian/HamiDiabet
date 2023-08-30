@@ -38,7 +38,7 @@ i use this NuGet: <a href="https://www.nuget.org/packages/Microsoft.Owin.Securit
 
 Hashing:<br>
 For hashing we can implement it using various algorithms.This project implements hashing using SHA256.<br>
-function of set Sha256Hash in is<a href="https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/SimpleRefreshTokenProvider.cs">here</a>
+function of set Sha256Hash is in: <a href="https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/SimpleRefreshTokenProvider.cs">here</a>
 
 
 ## The Auth server exposes the following endpoints:
