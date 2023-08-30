@@ -52,22 +52,22 @@ WebRequest:http://host/user/SignUp
 Method:POST
 ContentType: application/x-www-form-urlencoded
 requestBody:
-•	{name} : name
-•	{family} : family
-•	{cityId}: city Id (default:1)
-•	{mobile}: mobile num
-•	{password}: password
-•	{subscribeNewsletter}: subscribe newsletter (true or false)
+    {name} : name
+	{family} : family
+	{cityId}: city Id (default:1)
+	{mobile}: mobile num
+	{password}: password
+	{subscribeNewsletter}: subscribe newsletter (true or false)
 ```
 
-signIn Help:
+```signIn Help:
 WebRequest:http://host/user/signIn
 Method:POST
 ContentType: application/x-www-form-urlencoded
 requestBody:
-•	username: mobile num
-•	password: password
-•	grant_type: password
+	username: mobile num
+	password: password
+	grant_type: password
 
 sample json output:
     json: 
@@ -77,22 +77,22 @@ sample json output:
         "expires_in": 86399,
         "refresh_token": "d4572fbf0763403083448b6c82a0fa0e"
     }
+```
 
-
-signOut Help:
+```signOut Help:
 WebRequest:http://host/user/SignOut
 Method:POST
 requestHeader:
-•	Authorization: “Bearer”+” “+Token
+	Authorization: “Bearer”+” “+Token
+```
 
-
-refreshToken Help:
+```refreshToken Help:
 WebRequest:http://host/user/signIn
 Method:POST
 ContentType: application/x-www-form-urlencoded
 requestBody:
-•	refresh_token: refreshToken  (sample:” 5687654271344265a04d1d8644a9c151”)
-•	grant_type: refresh_token
+	refresh_token: refreshToken  (sample:” 5687654271344265a04d1d8644a9c151”)
+	grant_type: refresh_token
 
 sample json output:
     json: 
@@ -102,6 +102,7 @@ sample json output:
         "expires_in": 86399,
         "refresh_token": "d4572fbf0763403083448b6c82a0fa0e"
     }
+```
 
 implement of this requests is here: [`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetSite/HamiDiabet/ClassCollection/User.cs)
  
