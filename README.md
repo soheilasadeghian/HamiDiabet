@@ -28,17 +28,17 @@ _Rest Api project in root of repository(hamidiabetWebApi Folder)
 JWT authentication is a self-contained authentication protocol where the token is a base64 representation of a object which contains 3 parts seperated by a period:
 - Header
 - Payload (Claims)
-    set claims for user:setClaimsIdentity function in <a href="https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/SimpleAuthorizationServerProvider.cs">code</a>
+    set claims for user:setClaimsIdentity function in [`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/SimpleAuthorizationServerProvider.cs)
 - Signature
 
 The API has 1 controller:<br/>
 AuthController Contains the SignUp, and SignOut.<br>
-SignIn is here <a href="https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/App_Start/Startup.cs">signIn</a><br>
-i use this NuGet: <a href="https://www.nuget.org/packages/Microsoft.Owin.Security.Jwt"> Microsoft.Owin.Security.Jwt  </a>	
+SignIn is here [`signIn`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/App_Start/Startup.cs)<br>
+i use this NuGet: [`Microsoft.Owin.Security.Jwt`](https://www.nuget.org/packages/Microsoft.Owin.Security.Jwt)
 
 Hashing:<br>
 For hashing we can implement it using various algorithms.This project implements hashing using SHA256.<br>
-function of set Sha256Hash is in: <a href="https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/SimpleRefreshTokenProvider.cs">here</a>
+function of set Sha256Hash is in: [`here`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/SimpleRefreshTokenProvider.cs)
 
 
 ## The Auth server exposes the following endpoints:
@@ -103,17 +103,16 @@ sample json output:
         "refresh_token": "d4572fbf0763403083448b6c82a0fa0e"
     }
 
-implement of this requests is here: <a href="https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetSite/HamiDiabet/ClassCollection/User.cs">code</a>
+implement of this requests is here: [`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetSite/HamiDiabet/ClassCollection/User.cs)
  
-__NOTE: You can also test the API using a tool such as <a href="https://www.getpostman.com/">Postman</a>.__
+__NOTE: You can also test the API using a tool such as [`Postman`](https://www.getpostman.com/).__
 
 
 HamiDiabet Website:
 ![alt text](https://github.com/soheilasadeghian/HamiDiabet/blob/main/HamiDiabet/image/screenshot_hamidiabet.png?raw=true)
 
-Considerations
-<<<<<<< HEAD
+Considerations:
 If you have doubts about the implementation details or if you find a bug, please, open an issue. If you have ideas on how to improve the API or if you want to add a new functionality or fix a bug, please, contact me.
-=======
+
 If you have doubts about the implementation details or if you find a bug, please, open an issue. If you have ideas on how to improve the API or if you want to add a new functionality or fix a bug, please, contact me.
->>>>>>> 4c3661ae357d2ebc720ed6d1e340cc93e23df1e7
+
