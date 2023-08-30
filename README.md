@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 4c3661ae357d2ebc720ed6d1e340cc93e23df1e7
 # HamiDiabet
 WebSite to provide services to diabetic patients (Website & API Project With DB & JWT Authentication)
 
