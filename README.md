@@ -14,7 +14,7 @@ _Rest Api project in root of repository(hamidiabetWebApi Folder)
 
 ![alt text](https://github.com/soheilasadeghian/HamiDiabet/blob/main/HamiDiabet/image/rest.png?raw=true)
 
-Steps:
+## Steps:
 1. Restore DB in SQL Server from the DB file in root of repository <br/>
 2. Open hamidiabetWebApi Solution in Visual Studio and build the project <br/>
 3. Execute (F5) to run. Browser will throw error page which is fine as this is only WEB-API implementation <br/>
@@ -24,14 +24,15 @@ Steps:
 
 
 
-About Implement JWT Authentication:
+## About Implement JWT Authentication:
 JWT authentication is a self-contained authentication protocol where the token is a base64 representation of a object which contains 3 parts seperated by a period:
 - Header
 - Payload (Claims)
     set claims for user:setClaimsIdentity function in <a href="https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/SimpleAuthorizationServerProvider.cs">code</a>
 - Signature
 
-The API has 1 controller: AuthController Contains the SignUp, and SignOut.<br>
+The API has 1 controller:<br/>
+AuthController Contains the SignUp, and SignOut.<br>
 SignIn is here <a href="https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/App_Start/Startup.cs">signIn</a><br>
 i use this NuGet: <a href="https://www.nuget.org/packages/Microsoft.Owin.Security.Jwt"> Microsoft.Owin.Security.Jwt  </a>	
 
