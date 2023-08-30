@@ -112,14 +112,11 @@ sample json output:
 implement of this requests is here: [`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetSite/HamiDiabet/ClassCollection/User.cs)<br>
  
 __NOTE: You can also test the API using a tool such as [`Postman`](https://www.getpostman.com/).__
-__NOTE: PHP Mailer won't work on this deployed website. For that you need to download this whole project and run it locally on your PC with your email account.__
 
 
 HamiDiabet Website:<br>
 ![alt text](https://github.com/soheilasadeghian/HamiDiabet/blob/main/image/screenshot_hamidiabet.png?raw=true)
 
 ## Considerations:
-If you have doubts about the implementation details or if you find a bug, please, open an issue. If you have ideas on how to improve the API or if you want to add a new functionality or fix a bug, please, contact me.
-
 If you have doubts about the implementation details or if you find a bug, please, open an issue. If you have ideas on how to improve the API or if you want to add a new functionality or fix a bug, please, contact me.
 
