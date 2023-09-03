@@ -7,7 +7,7 @@ WebSite to provide services to diabetic patients (Website & API Project With DB 
 [![Ask Me Anything !](https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg)](https://www.linkedin.com/in/SoheilaSadeghian/)
 
 ## Overview
-This repository(HamiDiabet) includes two projects:
+This repository (HamiDiabet) includes two projects:
 
 ✔️ HamiDiabet Website project as a client in root of repository(hamidiabetSite Folder)
     The project “HamiDiabet Website” is a responsive website made with Asp.Net MVC Technology using C#, Bootstrap, JQuery, Ajax, HTML, CSS, JavaScript, SQL, and EntityFramework.
@@ -36,8 +36,7 @@ This repository(HamiDiabet) includes two projects:
 ## Contributing implementation JWT Authentication 💡
 JSON Web Token is a self-contained authentication protocol where the token is a base64 representation of a object which contains 3 parts seperated by a period:\
 ✔️ Header\
-✔️ Payload (Claims)\
-    set claims for user:setClaimsIdentity function in [`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/SimpleAuthorizationServerProvider.cs)\
+✔️ Payload (Claims): set claims for user:setClaimsIdentity function in [`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/SimpleAuthorizationServerProvider.cs)\
 ✔️ Signature 
 
 - **encryption by HMAC Algorithm**
@@ -63,7 +62,7 @@ new JwtSecurityToken(_issuer, "Any", data.Identity.Claims, issued.Value.UtcDateT
 );
 ```
 
-- **after SignIn we have accessToken,so in request we [`add to header Authorization`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetSite/HamiDiabet/ClassCollection/WebService.cs):**
+- **after SignIn we have accessToken, so in request we [`add to header Authorization`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetSite/HamiDiabet/ClassCollection/WebService.cs):**
 
 ```c#
 if (Authorization)
@@ -147,7 +146,7 @@ sample json output:
 
 [`persian help link`](https://zerotohero.ir/%D8%AF%D8%B3%D8%AA%D9%87%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C-%D9%86%D8%B4%D8%AF%D9%87/%D8%A7%D8%AD%D8%B2%D8%A7%D8%B1-%D9%87%D9%88%DB%8C%D8%AA-%D8%AA%D9%88%D8%B3%D8%B7-jwt/)
 
-HamiDiabet Website:<br>
+HamiDiabet Website:\\
 ![alt text](https://github.com/soheilasadeghian/HamiDiabet/blob/main/image/screenshot_hamidiabet.png?raw=true)
 
 
