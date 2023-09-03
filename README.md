@@ -1,20 +1,31 @@
-# HamiDiabet
+# HamiDiabet 🔥
 WebSite to provide services to diabetic patients (Website & API Project With DB & JWT Authentication)
 
-## Overview
+:star: Star me on GitHub — it helps!
 
+[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/SoheilaSadeghian/SoheilaSadeghian.github.io)
+[![Ask Me Anything !](https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg)](https://www.linkedin.com/in/SoheilaSadeghian/)
+
+## Overview
 This repository(HamiDiabet) includes two projects:
 
-_HamiDiabet Website project as a client in root of repository(hamidiabetSite Folder)
+✔️ HamiDiabet Website project as a client in root of repository(hamidiabetSite Folder)
     The project “HamiDiabet Website” is a responsive website made with Asp.Net MVC Technology using C#, Bootstrap, JQuery, Ajax, HTML, CSS, JavaScript, SQL, and EntityFramework.
     User registration and login using JWT.
 
-_Rest Api project in root of repository(hamidiabetWebApi Folder)
+✔️ Rest Api project in root of repository(hamidiabetWebApi Folder)
     hamidiabetWebApi is a Rest Api shows how to implement JSON Web Token authentication with ASP.NET MVC 5, Web Api 2,.Net Framework 4.5
+
 
 ![alt text](https://github.com/soheilasadeghian/HamiDiabet/blob/main/image/rest.png)
 
-## Steps:
+
+## Tools Used 🛠️
+*  Visual studio app,Sql server app
+*  ASP.NET MVC 5, Web Api 2,.Net Framework 4.5, C#, SQL, HTML, CSS, JavaScript, Bootstrap, JQuery, Ajax
+*  i use this NuGet: [`Microsoft.Owin.Security.Jwt`](https://www.nuget.org/packages/Microsoft.Owin.Security.Jwt)
+
+## Installation Steps 📦 
 1. Restore DB in SQL Server from the DB file in root of repository <br/>
 2. Open hamidiabetWebApi Solution in Visual Studio and build the project <br/>
 3. Execute (F5) to run. Browser will throw error page which is fine as this is only WEB-API implementation <br/>
@@ -22,30 +33,51 @@ _Rest Api project in root of repository(hamidiabetWebApi Folder)
 3. Execute (F5) to run. Browser will show Homepage of website (the picture of homepage is end of this readme)<br/>
 4. you can Register and Login to website and see the userTbl Table in database fields how to jwt authentication work
 
-
-
-## About Implement JWT Authentication:
-JWT authentication is a self-contained authentication protocol where the token is a base64 representation of a object which contains 3 parts seperated by a period:
-- Header
-- Payload (Claims)
+## Contributing implementation JWT Authentication 💡
+JSON Web Token is a self-contained authentication protocol where the token is a base64 representation of a object which contains 3 parts seperated by a period:
+✔️ Header
+✔️ Payload (Claims)
     set claims for user:setClaimsIdentity function in [`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/SimpleAuthorizationServerProvider.cs)
-- Signature
+✔️ Signature 
 
-The API has 1 controller:<br/>
+- **encryption by HMAC Algorithm**
+
+- **The API has 1 controller:**
 AuthController Contains the SignUp, and SignOut.<br>
 SignIn is here [`signIn`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/App_Start/Startup.cs)<br>
-i use this NuGet: [`Microsoft.Owin.Security.Jwt`](https://www.nuget.org/packages/Microsoft.Owin.Security.Jwt)
 
-Hashing:<br>
+
+- **Hashing:**
 For hashing we can implement it using various algorithms.This project implements hashing using SHA256.<br>
 function of set Sha256Hash is in: [`here`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/SimpleRefreshTokenProvider.cs)
 
 
+- **[`create Signature`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/CustomJwtFormat.cs)**
+
+```c#
+private static readonly byte[] _secret = TextEncodings.Base64Url.Decode("QkU0QUMwNUNBODEyRDlGNTY0QTc3RUQ1MkE1NTY4RTQ4QzlDMDA3MTE1QTE2NEYyRUFFM0QzRjQzREQzNDVFMA==");
+var signingKey = new HmacSigningCredentials(_secret);
+return new JwtSecurityTokenHandler()
+.WriteToken(
+new JwtSecurityToken(_issuer, "Any", data.Identity.Claims, issued.Value.UtcDateTime, expires.Value.UtcDateTime, signingKey)
+);
+```
+
+- **after SignIn we have accessToken,so in request we [`add to header Authorization`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetSite/HamiDiabet/ClassCollection/WebService.cs):**
+
+```c#
+if (Authorization)
+{
+    request.Headers.Add("Authorization", "Bearer " + HttpContext.Current.Session["access_token"]);
+}
+```
+
 ## The Auth server exposes the following endpoints:
 - http://host/user/SignUp to register the user
-- http://host/user/signIn to login the user and generate the initial set of access token and refresh token
+- http://host/user/SignIn to login the user and generate the initial set of access token and refresh token
 - http://host/user/SignOut to register the user
-- http://host/user/signIn to refresh the access token using the refresh token sent
+- http://host/user/SignIn to refresh the access token using the refresh token sent
+
 
 SignUp:
 
@@ -109,14 +141,21 @@ sample json output:
     }
 ```
 
-implement of this requests is here: [`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetSite/HamiDiabet/ClassCollection/User.cs)<br>
+### implement of this requests is here: [`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetSite/HamiDiabet/ClassCollection/User.cs)<br>
  
 __NOTE: You can also test the API using a tool such as [`Postman`](https://www.getpostman.com/).__
 
+[`persian help link`](https://zerotohero.ir/%D8%AF%D8%B3%D8%AA%D9%87%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C-%D9%86%D8%B4%D8%AF%D9%87/%D8%A7%D8%AD%D8%B2%D8%A7%D8%B1-%D9%87%D9%88%DB%8C%D8%AA-%D8%AA%D9%88%D8%B3%D8%B7-jwt/)
 
 HamiDiabet Website:<br>
 ![alt text](https://github.com/soheilasadeghian/HamiDiabet/blob/main/image/screenshot_hamidiabet.png?raw=true)
 
-## Considerations:
-If you have doubts about the implementation details or if you find a bug, please, open an issue. If you have ideas on how to improve the API or if you want to add a new functionality or fix a bug, please, contact me.
+
+## Support
+For support, [click here](https://github.com/soheilasadeghian).
+
+## Give a star ⭐️ !!!
+If you liked the project, please give a star :)
+
+
 
