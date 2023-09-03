@@ -34,25 +34,25 @@ This repository(HamiDiabet) includes two projects:
 4. you can Register and Login to website and see the userTbl Table in database fields how to jwt authentication work
 
 ## Contributing implementation JWT Authentication 💡
-JSON Web Token is a self-contained authentication protocol where the token is a base64 representation of a object which contains 3 parts seperated by a period:
-✔️ Header
-✔️ Payload (Claims)
-    set claims for user:setClaimsIdentity function in [`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/SimpleAuthorizationServerProvider.cs)
+JSON Web Token is a self-contained authentication protocol where the token is a base64 representation of a object which contains 3 parts seperated by a period:\
+✔️ Header\
+✔️ Payload (Claims)\
+    set claims for user:setClaimsIdentity function in [`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/SimpleAuthorizationServerProvider.cs)\
 ✔️ Signature 
 
 - **encryption by HMAC Algorithm**
 
-- **The API has 1 controller:**
-AuthController Contains the SignUp, and SignOut.<br>
+- **The API has 1 controller:**\
+AuthController Contains the SignUp, and SignOut.\
 SignIn is here [`signIn`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/App_Start/Startup.cs)<br>
 
 
-- **Hashing:**
+- **Hashing:**\
 For hashing we can implement it using various algorithms.This project implements hashing using SHA256.<br>
 function of set Sha256Hash is in: [`here`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/SimpleRefreshTokenProvider.cs)
 
 
-- **[`create Signature`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/CustomJwtFormat.cs)**
+- **create Signature[`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/CustomJwtFormat.cs)**
 
 ```c#
 private static readonly byte[] _secret = TextEncodings.Base64Url.Decode("QkU0QUMwNUNBODEyRDlGNTY0QTc3RUQ1MkE1NTY4RTQ4QzlDMDA3MTE1QTE2NEYyRUFFM0QzRjQzREQzNDVFMA==");
@@ -141,9 +141,9 @@ sample json output:
     }
 ```
 
-### implement of this requests is here: [`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetSite/HamiDiabet/ClassCollection/User.cs)<br>
+## implement of this requests is here: [`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetSite/HamiDiabet/ClassCollection/User.cs)<br>
  
-__NOTE: You can also test the API using a tool such as [`Postman`](https://www.getpostman.com/).__
+✔️ __NOTE: You can also test the API using a tool such as [`Postman`](https://www.getpostman.com/).__
 
 [`persian help link`](https://zerotohero.ir/%D8%AF%D8%B3%D8%AA%D9%87%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C-%D9%86%D8%B4%D8%AF%D9%87/%D8%A7%D8%AD%D8%B2%D8%A7%D8%B1-%D9%87%D9%88%DB%8C%D8%AA-%D8%AA%D9%88%D8%B3%D8%B7-jwt/)
 
