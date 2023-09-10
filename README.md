@@ -42,7 +42,7 @@ JSON Web Token is a self-contained authentication protocol where the token is a 
 
 - **encryption by HMAC Algorithm**
 
-- **The API has 1 controller:**\
+- **The project has 1 controller:**\
 AuthController Contains the SignUp, and SignOut.\
 SignIn is here [`signIn`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/App_Start/Startup.cs)<br>
 
