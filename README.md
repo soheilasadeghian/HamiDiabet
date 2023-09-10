@@ -1,5 +1,5 @@
 # HamiDiabet 🔥
-WebSite to provide services to diabetic patients (Website & web service Project With DB & JWT Authentication)
+WebSite to provide services to diabetic patients (Website & API Project With DB & JWT Authentication)
 
 :star: Star me on GitHub — it helps!
 
@@ -14,8 +14,8 @@ This repository (HamiDiabet) includes two projects:
     The project “HamiDiabet Website” is a responsive website made with Asp.Net MVC Technology using C#, Bootstrap, JQuery, Ajax, HTML, CSS, JavaScript, SQL, and EntityFramework.
     User registration and login using JWT.
 
-✔️ web service project in root of repository(hamidiabetWebApi Folder) 
-    hamidiabetWebApi is a Web Service (via SOAP with C#) shows how to implement JSON Web Token authentication with ASP.NET MVC 5, .Net Framework 4.5
+✔️ Rest Api project in root of repository(hamidiabetWebApi Folder)
+    hamidiabetWebApi is a Rest Api shows how to implement JSON Web Token authentication with ASP.NET MVC 5, Web Api 2,.Net Framework 4.5
 
 
 ![alt text](https://github.com/soheilasadeghian/HamiDiabet/blob/main/image/rest.png)
@@ -23,7 +23,7 @@ This repository (HamiDiabet) includes two projects:
 
 ## Tools Used 🛠️
 *  Visual studio app,Sql server app
-*  ASP.NET MVC 5,.Net Framework 4.5, C#, SQL, HTML, CSS, JavaScript, Bootstrap, JQuery, Ajax
+*  ASP.NET MVC 5, Web Api 2,.Net Framework 4.5, C#, SQL, HTML, CSS, JavaScript, Bootstrap, JQuery, Ajax
 *  i use this NuGet: [`Microsoft.Owin.Security.Jwt`](https://www.nuget.org/packages/Microsoft.Owin.Security.Jwt)
 
 ## Installation Steps 📦 
@@ -42,7 +42,7 @@ JSON Web Token is a self-contained authentication protocol where the token is a 
 
 - **encryption by HMAC Algorithm**
 
-- **The project has 1 controller:**\
+- **The API has 1 controller:**\
 AuthController Contains the SignUp, and SignOut.\
 SignIn is here [`signIn`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetWebApi/testwebapi/App_Start/Startup.cs)<br>
 
